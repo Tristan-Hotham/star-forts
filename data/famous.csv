@@ -1,0 +1,15 @@
+id,name,country,year,builder,area_ha,points,diameter_m,perimeter_m,wikipedia
+SF0334,Palmanova,Italy,1593,Venice,113.79,8,1292,5042,https://en.wikipedia.org/wiki/Palmanova
+SF0063,Naarden,Netherlands,1673,Dutch Republic,103.53,5,1582,5623,https://en.wikipedia.org/wiki/Naarden
+SF0046,Bourtange,Netherlands,1593,Dutch Republic,28.52,10,854,3731,https://en.wikipedia.org/wiki/Bourtange
+SF0277,Neuf-Brisach,France,1698,France,48.64,8,946,3178,https://en.wikipedia.org/wiki/Neuf-Brisach
+SF0775,Valletta,Malta,1566,Knights of St John,66.54,12,1414,4791,https://en.wikipedia.org/wiki/Valletta
+SF0677,Elvas,Portugal,1643,Portugal,68.07,17,1401,4598,https://en.wikipedia.org/wiki/Elvas
+SF0569,Goryōkaku,Japan,1857,Japan,11.89,5,488,1738,https://en.wikipedia.org/wiki/Gory%C5%8Dkaku
+SF0327,Alba Carolina Fortress,Romania,1715,Habsburg Monarchy,32.43,6,866,3403,https://en.wikipedia.org/wiki/Alba_Carolina_Citadel
+SF0084,Willemstad,Netherlands,1583,Dutch Republic,48.04,4,899,3196,https://en.wikipedia.org/wiki/Willemstad
+SF0608,Almeida,Portugal,1641,Portugal,20.03,6,680,2459,https://en.wikipedia.org/wiki/Almeida
+SF0132,Citadel of Lille,France,1667,France,27.86,10,715,2586,https://en.wikipedia.org/wiki/Citadel_of_Lille
+SF0517,Citadel of Jaca,Spain,1592,Spain,3.53,9,279,1554,https://en.wikipedia.org/wiki/Citadel_of_Jaca
+SF0661,Fort McHenry,United States of America,1798,United States,0.88,5,146,539,https://en.wikipedia.org/wiki/Fort_McHenry
+SF0850,Castillo de San Marcos,United States of America,1672,Spain,0.54,4,134,457,https://en.wikipedia.org/wiki/Castillo_de_San_Marcos

@@ -1,0 +1,1870 @@
+{
+ "meta": {
+  "page": "https://maps.tristanhotham.com/star-forts/",
+  "repo": "https://github.com/Tristan-Hotham/star-forts",
+  "slug": "star-forts",
+  "first_year": 1450,
+  "last_year": 1945
+ },
+ "counts": {
+  "records": 2120,
+  "main": 1307,
+  "outlines": 769,
+  "catalogue": 498,
+  "hand_added": 40,
+  "bavarian": 560,
+  "lookalike": 253,
+  "lookalike_outlines": 253,
+  "outline_in": 1022,
+  "catalogue_in": 1061,
+  "merged": 3,
+  "osm_matched": 416,
+  "sconce_catalogue": 478,
+  "countries": 80,
+  "named": 704,
+  "unnamed_outlines": 603,
+  "wikidata_ids": 795,
+  "outline_pct": 58.8,
+  "europe": 1165,
+  "europe_pct": 89.1,
+  "beyond_europe": 142
+ },
+ "dates": {
+  "dated": 251,
+  "dated_pct": 19.2,
+  "hand": 84,
+  "hand_rows": 84,
+  "wikidata": 127,
+  "osm": 40,
+  "nonhand": 167,
+  "nonhand_pct": 12.8,
+  "medieval_only": 10,
+  "outline_dated": 172,
+  "outline_dated_pct": 22.4,
+  "median_year": 1728,
+  "before_1600": 49,
+  "y1600_1699": 64,
+  "y1700_1799": 53,
+  "from_1800": 85,
+  "before_1600_pct": 19.5,
+  "y1600_1699_pct": 25.5,
+  "y1700_1799_pct": 21.1,
+  "from_1800_pct": 33.9,
+  "first": 1488
+ },
+ "decades": [
+  {
+   "decade": 1480,
+   "n": 1,
+   "europe": 1,
+   "beyond": 0
+  },
+  {
+   "decade": 1490,
+   "n": 1,
+   "europe": 1,
+   "beyond": 0
+  },
+  {
+   "decade": 1500,
+   "n": 0,
+   "europe": 0,
+   "beyond": 0
+  },
+  {
+   "decade": 1510,
+   "n": 0,
+   "europe": 0,
+   "beyond": 0
+  },
+  {
+   "decade": 1520,
+   "n": 1,
+   "europe": 0,
+   "beyond": 1
+  },
+  {
+   "decade": 1530,
+   "n": 6,
+   "europe": 4,
+   "beyond": 2
+  },
+  {
+   "decade": 1540,
+   "n": 3,
+   "europe": 2,
+   "beyond": 1
+  },
+  {
+   "decade": 1550,
+   "n": 9,
+   "europe": 7,
+   "beyond": 2
+  },
+  {
+   "decade": 1560,
+   "n": 8,
+   "europe": 7,
+   "beyond": 1
+  },
+  {
+   "decade": 1570,
+   "n": 3,
+   "europe": 3,
+   "beyond": 0
+  },
+  {
+   "decade": 1580,
+   "n": 6,
+   "europe": 5,
+   "beyond": 1
+  },
+  {
+   "decade": 1590,
+   "n": 11,
+   "europe": 8,
+   "beyond": 3
+  },
+  {
+   "decade": 1600,
+   "n": 4,
+   "europe": 2,
+   "beyond": 2
+  },
+  {
+   "decade": 1610,
+   "n": 5,
+   "europe": 2,
+   "beyond": 3
+  },
+  {
+   "decade": 1620,
+   "n": 7,
+   "europe": 3,
+   "beyond": 4
+  },
+  {
+   "decade": 1630,
+   "n": 5,
+   "europe": 3,
+   "beyond": 2
+  },
+  {
+   "decade": 1640,
+   "n": 7,
+   "europe": 4,
+   "beyond": 3
+  },
+  {
+   "decade": 1650,
+   "n": 3,
+   "europe": 3,
+   "beyond": 0
+  },
+  {
+   "decade": 1660,
+   "n": 8,
+   "europe": 5,
+   "beyond": 3
+  },
+  {
+   "decade": 1670,
+   "n": 12,
+   "europe": 10,
+   "beyond": 2
+  },
+  {
+   "decade": 1680,
+   "n": 9,
+   "europe": 8,
+   "beyond": 1
+  },
+  {
+   "decade": 1690,
+   "n": 4,
+   "europe": 4,
+   "beyond": 0
+  },
+  {
+   "decade": 1700,
+   "n": 4,
+   "europe": 4,
+   "beyond": 0
+  },
+  {
+   "decade": 1710,
+   "n": 5,
+   "europe": 3,
+   "beyond": 2
+  },
+  {
+   "decade": 1720,
+   "n": 4,
+   "europe": 3,
+   "beyond": 1
+  },
+  {
+   "decade": 1730,
+   "n": 5,
+   "europe": 3,
+   "beyond": 2
+  },
+  {
+   "decade": 1740,
+   "n": 5,
+   "europe": 3,
+   "beyond": 2
+  },
+  {
+   "decade": 1750,
+   "n": 9,
+   "europe": 3,
+   "beyond": 6
+  },
+  {
+   "decade": 1760,
+   "n": 8,
+   "europe": 2,
+   "beyond": 6
+  },
+  {
+   "decade": 1770,
+   "n": 4,
+   "europe": 1,
+   "beyond": 3
+  },
+  {
+   "decade": 1780,
+   "n": 3,
+   "europe": 3,
+   "beyond": 0
+  },
+  {
+   "decade": 1790,
+   "n": 6,
+   "europe": 4,
+   "beyond": 2
+  },
+  {
+   "decade": 1800,
+   "n": 6,
+   "europe": 4,
+   "beyond": 2
+  },
+  {
+   "decade": 1810,
+   "n": 5,
+   "europe": 3,
+   "beyond": 2
+  },
+  {
+   "decade": 1820,
+   "n": 1,
+   "europe": 0,
+   "beyond": 1
+  },
+  {
+   "decade": 1830,
+   "n": 7,
+   "europe": 3,
+   "beyond": 4
+  },
+  {
+   "decade": 1840,
+   "n": 4,
+   "europe": 3,
+   "beyond": 1
+  },
+  {
+   "decade": 1850,
+   "n": 11,
+   "europe": 9,
+   "beyond": 2
+  },
+  {
+   "decade": 1860,
+   "n": 12,
+   "europe": 10,
+   "beyond": 2
+  },
+  {
+   "decade": 1870,
+   "n": 16,
+   "europe": 16,
+   "beyond": 0
+  },
+  {
+   "decade": 1880,
+   "n": 13,
+   "europe": 13,
+   "beyond": 0
+  },
+  {
+   "decade": 1890,
+   "n": 1,
+   "europe": 0,
+   "beyond": 1
+  },
+  {
+   "decade": 1900,
+   "n": 6,
+   "europe": 6,
+   "beyond": 0
+  },
+  {
+   "decade": 1910,
+   "n": 3,
+   "europe": 3,
+   "beyond": 0
+  },
+  {
+   "decade": 1920,
+   "n": 0,
+   "europe": 0,
+   "beyond": 0
+  },
+  {
+   "decade": 1930,
+   "n": 0,
+   "europe": 0,
+   "beyond": 0
+  },
+  {
+   "decade": 1940,
+   "n": 0,
+   "europe": 0,
+   "beyond": 0
+  }
+ ],
+ "regions": [
+  {
+   "region": "Italy and Malta",
+   "n": 97,
+   "outlines": 91,
+   "dated": 34,
+   "dated_pct": 35.1,
+   "first_year": 1488,
+   "first_name": "Cassero della Fortezza",
+   "first_src": "Wikidata inception",
+   "first_country": "Italy",
+   "median_year": 1725,
+   "median_area_ha": 1.46
+  },
+  {
+   "region": "Iberia",
+   "n": 102,
+   "outlines": 100,
+   "dated": 14,
+   "dated_pct": 13.7,
+   "first_year": 1553,
+   "first_name": "Fort of São Julião da Barra",
+   "first_src": "Wikipedia",
+   "first_country": "Portugal",
+   "median_year": 1623,
+   "median_area_ha": 0.86
+  },
+  {
+   "region": "France",
+   "n": 171,
+   "outlines": 170,
+   "dated": 30,
+   "dated_pct": 17.5,
+   "first_year": 1553,
+   "first_name": "Fort-Carré",
+   "first_src": "Wikidata inception",
+   "first_country": "France",
+   "median_year": 1723,
+   "median_area_ha": 2.42
+  },
+  {
+   "region": "Low Countries",
+   "n": 125,
+   "outlines": 44,
+   "dated": 19,
+   "dated_pct": 15.2,
+   "first_year": 1547,
+   "first_name": "Fort Rammekens",
+   "first_src": "Wikidata inception",
+   "first_country": "Netherlands",
+   "median_year": 1673,
+   "median_area_ha": 2.5
+  },
+  {
+   "region": "German lands and Central Europe",
+   "n": 176,
+   "outlines": 91,
+   "dated": 32,
+   "dated_pct": 18.2,
+   "first_year": 1548,
+   "first_name": "Citadel of Jülich",
+   "first_src": "Wikipedia",
+   "first_country": "Germany",
+   "median_year": 1806,
+   "median_area_ha": 1.65
+  },
+  {
+   "region": "Scandinavia and the Baltic",
+   "n": 344,
+   "outlines": 17,
+   "dated": 21,
+   "dated_pct": 6.1,
+   "first_year": 1559,
+   "first_name": "Landskrona Citadel",
+   "first_src": "Wikidata inception",
+   "first_country": "Sweden",
+   "median_year": 1677,
+   "median_area_ha": 2.61
+  },
+  {
+   "region": "British Isles",
+   "n": 34,
+   "outlines": 27,
+   "dated": 14,
+   "dated_pct": 41.2,
+   "first_year": 1558,
+   "first_name": "Berwick-upon-Tweed walls",
+   "first_src": "Wikipedia",
+   "first_country": "United Kingdom",
+   "median_year": 1858,
+   "median_area_ha": 3.5
+  },
+  {
+   "region": "Eastern Europe, Balkans and Turkey",
+   "n": 116,
+   "outlines": 112,
+   "dated": 17,
+   "dated_pct": 14.7,
+   "first_year": 1567,
+   "first_name": "Venetian walls of Nicosia",
+   "first_src": "Wikipedia",
+   "first_country": "Cyprus",
+   "median_year": 1734,
+   "median_area_ha": 2.83
+  },
+  {
+   "region": "Africa",
+   "n": 15,
+   "outlines": 12,
+   "dated": 4,
+   "dated_pct": 26.7,
+   "first_year": 1541,
+   "first_name": "Mazagan",
+   "first_src": "Wikipedia",
+   "first_country": "Morocco",
+   "median_year": 1575,
+   "median_area_ha": 0.44
+  },
+  {
+   "region": "Americas",
+   "n": 87,
+   "outlines": 76,
+   "dated": 42,
+   "dated_pct": 48.3,
+   "first_year": 1539,
+   "first_name": "Castillo San Felipe del Morro",
+   "first_src": "Wikipedia",
+   "first_country": "Puerto Rico",
+   "median_year": 1760,
+   "median_area_ha": 1.31
+  },
+  {
+   "region": "Asia and Oceania",
+   "n": 40,
+   "outlines": 29,
+   "dated": 24,
+   "dated_pct": 60.0,
+   "first_year": 1522,
+   "first_name": "Fort Kastela",
+   "first_src": "OpenStreetMap start_date",
+   "first_country": "Indonesia",
+   "median_year": 1644,
+   "median_area_ha": 1.49
+  }
+ ],
+ "countries_top": [
+  {
+   "iso": "SWE",
+   "country": "Sweden",
+   "n": 297,
+   "outlines": 2,
+   "dated": 7
+  },
+  {
+   "iso": "FRA",
+   "country": "France",
+   "n": 170,
+   "outlines": 169,
+   "dated": 30
+  },
+  {
+   "iso": "NLD",
+   "country": "Netherlands",
+   "n": 93,
+   "outlines": 27,
+   "dated": 12
+  },
+  {
+   "iso": "ITA",
+   "country": "Italy",
+   "n": 88,
+   "outlines": 83,
+   "dated": 29
+  },
+  {
+   "iso": "POL",
+   "country": "Poland",
+   "n": 66,
+   "outlines": 34,
+   "dated": 14
+  },
+  {
+   "iso": "DEU",
+   "country": "Germany",
+   "n": 60,
+   "outlines": 23,
+   "dated": 14
+  },
+  {
+   "iso": "ESP",
+   "country": "Spain",
+   "n": 55,
+   "outlines": 54,
+   "dated": 3
+  },
+  {
+   "iso": "PRT",
+   "country": "Portugal",
+   "n": 47,
+   "outlines": 46,
+   "dated": 11
+  },
+  {
+   "iso": "USA",
+   "country": "United States of America",
+   "n": 39,
+   "outlines": 37,
+   "dated": 18
+  },
+  {
+   "iso": "UKR",
+   "country": "Ukraine",
+   "n": 30,
+   "outlines": 30,
+   "dated": 3
+  },
+  {
+   "iso": "BEL",
+   "country": "Belgium",
+   "n": 28,
+   "outlines": 13,
+   "dated": 7
+  },
+  {
+   "iso": "GBR",
+   "country": "United Kingdom",
+   "n": 26,
+   "outlines": 21,
+   "dated": 12
+  }
+ ],
+ "first_by_country": [
+  {
+   "iso": "ITA",
+   "country": "Italy",
+   "region": "Italy and Malta",
+   "first_year": 1488,
+   "first_name": "Cassero della Fortezza",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 35
+  },
+  {
+   "iso": "IDN",
+   "country": "Indonesia",
+   "region": "Asia and Oceania",
+   "first_year": 1522,
+   "first_name": "Fort Kastela",
+   "first_src": "OpenStreetMap start_date",
+   "km_from_florence": 12002
+  },
+  {
+   "iso": "IND",
+   "country": "India",
+   "region": "Asia and Oceania",
+   "first_year": 1535,
+   "first_name": "Diu Fort",
+   "first_src": "Wikipedia",
+   "km_from_florence": 6026
+  },
+  {
+   "iso": "PRI",
+   "country": "Puerto Rico",
+   "region": "Americas",
+   "first_year": 1539,
+   "first_name": "Castillo San Felipe del Morro",
+   "first_src": "Wikipedia",
+   "km_from_florence": 7601
+  },
+  {
+   "iso": "MAR",
+   "country": "Morocco",
+   "region": "Africa",
+   "first_year": 1541,
+   "first_name": "Mazagan",
+   "first_src": "Wikipedia",
+   "km_from_florence": 2070
+  },
+  {
+   "iso": "NLD",
+   "country": "Netherlands",
+   "region": "Low Countries",
+   "first_year": 1547,
+   "first_name": "Fort Rammekens",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 1026
+  },
+  {
+   "iso": "DEU",
+   "country": "Germany",
+   "region": "German lands and Central Europe",
+   "first_year": 1548,
+   "first_name": "Citadel of Jülich",
+   "first_src": "Wikipedia",
+   "km_from_florence": 876
+  },
+  {
+   "iso": "MLT",
+   "country": "Malta",
+   "region": "Italy and Malta",
+   "first_year": 1552,
+   "first_name": "Fort St Elmo",
+   "first_src": "Wikipedia",
+   "km_from_florence": 918
+  },
+  {
+   "iso": "FRA",
+   "country": "France",
+   "region": "France",
+   "first_year": 1553,
+   "first_name": "Fort-Carré",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 333
+  },
+  {
+   "iso": "PRT",
+   "country": "Portugal",
+   "region": "Iberia",
+   "first_year": 1553,
+   "first_name": "Fort of São Julião da Barra",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1806
+  },
+  {
+   "iso": "MOZ",
+   "country": "Mozambique",
+   "region": "Africa",
+   "first_year": 1558,
+   "first_name": "Fort São Sebastião",
+   "first_src": "Wikipedia",
+   "km_from_florence": 7192
+  },
+  {
+   "iso": "GBR",
+   "country": "United Kingdom",
+   "region": "British Isles",
+   "first_year": 1558,
+   "first_name": "Berwick-upon-Tweed walls",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1633
+  },
+  {
+   "iso": "SWE",
+   "country": "Sweden",
+   "region": "Scandinavia and the Baltic",
+   "first_year": 1559,
+   "first_name": "Landskrona Citadel",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 1350
+  },
+  {
+   "iso": "PHL",
+   "country": "Philippines",
+   "region": "Asia and Oceania",
+   "first_year": 1565,
+   "first_name": "Fort San Pedro",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 10967
+  },
+  {
+   "iso": "BEL",
+   "country": "Belgium",
+   "region": "Low Countries",
+   "first_year": 1567,
+   "first_name": "Citadel of Antwerp",
+   "first_src": "Wikipedia",
+   "km_from_florence": 973
+  },
+  {
+   "iso": "CYP",
+   "country": "Cyprus",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1567,
+   "first_name": "Venetian walls of Nicosia",
+   "first_src": "Wikipedia",
+   "km_from_florence": 2116
+  },
+  {
+   "iso": "ESP",
+   "country": "Spain",
+   "region": "Iberia",
+   "first_year": 1571,
+   "first_name": "Citadel of Pamplona",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1049
+  },
+  {
+   "iso": "FRO",
+   "country": "Faroe Islands",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1580,
+   "first_name": "Skansin",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 2343
+  },
+  {
+   "iso": "POL",
+   "country": "Poland",
+   "region": "German lands and Central Europe",
+   "first_year": 1580,
+   "first_name": "Zamość",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1187
+  },
+  {
+   "iso": "CUB",
+   "country": "Cuba",
+   "region": "Americas",
+   "first_year": 1589,
+   "first_name": "Morro Castle",
+   "first_src": "Wikipedia",
+   "km_from_florence": 8528
+  },
+  {
+   "iso": "KEN",
+   "country": "Kenya",
+   "region": "Africa",
+   "first_year": 1593,
+   "first_name": "Fort Jesus",
+   "first_src": "Wikipedia",
+   "km_from_florence": 6031
+  },
+  {
+   "iso": "BRA",
+   "country": "Brazil",
+   "region": "Americas",
+   "first_year": 1598,
+   "first_name": "Forte dos Reis Magos",
+   "first_src": "Wikipedia",
+   "km_from_florence": 7206
+  },
+  {
+   "iso": "MAC",
+   "country": "Macau",
+   "region": "Asia and Oceania",
+   "first_year": 1617,
+   "first_name": "Fortaleza do Monte",
+   "first_src": "Wikipedia",
+   "km_from_florence": 9247
+  },
+  {
+   "iso": "LKA",
+   "country": "Sri Lanka",
+   "region": "Asia and Oceania",
+   "first_year": 1623,
+   "first_name": "Fort Frederick",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 7746
+  },
+  {
+   "iso": "TWN",
+   "country": "Taiwan",
+   "region": "Asia and Oceania",
+   "first_year": 1624,
+   "first_name": "Fort Zeelandia",
+   "first_src": "Wikipedia",
+   "km_from_florence": 9657
+  },
+  {
+   "iso": "USA",
+   "country": "United States of America",
+   "region": "Americas",
+   "first_year": 1625,
+   "first_name": "Fort Amsterdam",
+   "first_src": "Wikipedia",
+   "km_from_florence": 6699
+  },
+  {
+   "iso": "DNK",
+   "country": "Denmark",
+   "region": "Scandinavia and the Baltic",
+   "first_year": 1626,
+   "first_name": "Kastellet",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1329
+  },
+  {
+   "iso": "CAN",
+   "country": "Canada",
+   "region": "Americas",
+   "first_year": 1629,
+   "first_name": "Fort Anne",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 5874
+  },
+  {
+   "iso": "CUW",
+   "country": "Curaçao",
+   "region": "Americas",
+   "first_year": 1634,
+   "first_name": "Fort Amsterdam (Curaçao)",
+   "first_src": "Wikipedia",
+   "km_from_florence": 8296
+  },
+  {
+   "iso": "AUT",
+   "country": "Austria",
+   "region": "German lands and Central Europe",
+   "first_year": 1642,
+   "first_name": "Neue Schanze (Lochau)",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 432
+  },
+  {
+   "iso": "NOR",
+   "country": "Norway",
+   "region": "Scandinavia and the Baltic",
+   "first_year": 1660,
+   "first_name": "Fredriksten fortress",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 1707
+  },
+  {
+   "iso": "ZAF",
+   "country": "South Africa",
+   "region": "Africa",
+   "first_year": 1666,
+   "first_name": "Castle of Good Hope",
+   "first_src": "Wikipedia",
+   "km_from_florence": 8670
+  },
+  {
+   "iso": "IRL",
+   "country": "Ireland",
+   "region": "British Isles",
+   "first_year": 1677,
+   "first_name": "Charles Fort",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1712
+  },
+  {
+   "iso": "SRB",
+   "country": "Serbia",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1692,
+   "first_name": "Petrovaradin Fortress",
+   "first_src": "Wikipedia",
+   "km_from_florence": 702
+  },
+  {
+   "iso": "RUS",
+   "country": "Russia",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1703,
+   "first_name": "Peter and Paul Fortress",
+   "first_src": "Wikipedia",
+   "km_from_florence": 2208
+  },
+  {
+   "iso": "HRV",
+   "country": "Croatia",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1712,
+   "first_name": "Tvrđa",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 621
+  },
+  {
+   "iso": "ROU",
+   "country": "Romania",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1715,
+   "first_name": "Alba Carolina Fortress",
+   "first_src": "Wikipedia",
+   "km_from_florence": 1002
+  },
+  {
+   "iso": "UKR",
+   "country": "Ukraine",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1736,
+   "first_name": "Піщана Самара",
+   "first_src": "OpenStreetMap start_date",
+   "km_from_florence": 1909
+  },
+  {
+   "iso": "URY",
+   "country": "Uruguay",
+   "region": "Americas",
+   "first_year": 1737,
+   "first_name": "Fuerte San Miguel",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 10824
+  },
+  {
+   "iso": "VIR",
+   "country": "United States Virgin Islands",
+   "region": "Americas",
+   "first_year": 1738,
+   "first_name": "Fort Christiansvaern",
+   "first_src": "Wikipedia",
+   "km_from_florence": 7540
+  },
+  {
+   "iso": "PER",
+   "country": "Peru",
+   "region": "Americas",
+   "first_year": 1747,
+   "first_name": "Fortaleza del Real Felipe",
+   "first_src": "Wikipedia",
+   "km_from_florence": 10805
+  },
+  {
+   "iso": "FIN",
+   "country": "Finland",
+   "region": "Scandinavia and the Baltic",
+   "first_year": 1748,
+   "first_name": "Suomenlinna",
+   "first_src": "Wikipedia",
+   "km_from_florence": 2040
+  },
+  {
+   "iso": "MEX",
+   "country": "Mexico",
+   "region": "Americas",
+   "first_year": 1776,
+   "first_name": "San Carlos Fortress",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 9907
+  },
+  {
+   "iso": "CZE",
+   "country": "Czech Republic",
+   "region": "German lands and Central Europe",
+   "first_year": 1780,
+   "first_name": "Josefov",
+   "first_src": "Wikipedia",
+   "km_from_florence": 811
+  },
+  {
+   "iso": "VNM",
+   "country": "Vietnam",
+   "region": "Asia and Oceania",
+   "first_year": 1809,
+   "first_name": "Quảng Trị Citadel",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 9190
+  },
+  {
+   "iso": "ARM",
+   "country": "Armenia",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1837,
+   "first_name": "Star fort at Gyumri",
+   "first_src": "OpenStreetMap start_date",
+   "km_from_florence": 2682
+  },
+  {
+   "iso": "JPN",
+   "country": "Japan",
+   "region": "Asia and Oceania",
+   "first_year": 1857,
+   "first_name": "Goryōkaku",
+   "first_src": "Wikipedia",
+   "km_from_florence": 9250
+  },
+  {
+   "iso": "TUR",
+   "country": "Turkey",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1872,
+   "first_name": "Small Kiremitlik Redoubt",
+   "first_src": "OpenStreetMap start_date",
+   "km_from_florence": 2509
+  },
+  {
+   "iso": "MNE",
+   "country": "Montenegro",
+   "region": "Eastern Europe, Balkans and Turkey",
+   "first_year": 1884,
+   "first_name": "Fort Gorazda",
+   "first_src": "Wikidata inception",
+   "km_from_florence": 628
+  }
+ ],
+ "n_countries_dated": 49,
+ "n_countries_undated": 31,
+ "diffusion": {
+  "n": 49,
+  "rho": 0.15,
+  "p": 0.31945404624075574,
+  "km_per_year": 3.3,
+  "n_europe": 27,
+  "rho_europe": 0.29,
+  "p_europe": 0.1483534991008973,
+  "median_first_europe": 1626,
+  "median_first_beyond": 1623
+ },
+ "colonial": [
+  {
+   "builder": "Portugal",
+   "n": 10,
+   "first_year": 1535,
+   "first_name": "Diu Fort",
+   "first_country": "India",
+   "forts": [
+    {
+     "name": "Diu Fort",
+     "year": 1535,
+     "country": "India",
+     "region": "Asia and Oceania",
+     "id": "SF1545"
+    },
+    {
+     "name": "Mazagan",
+     "year": 1541,
+     "country": "Morocco",
+     "region": "Africa",
+     "id": "SF1542"
+    },
+    {
+     "name": "Fort São Sebastião",
+     "year": 1558,
+     "country": "Mozambique",
+     "region": "Africa",
+     "id": "SF1011"
+    },
+    {
+     "name": "Moti Daman Fort",
+     "year": 1559,
+     "country": "India",
+     "region": "Asia and Oceania",
+     "id": "SF1546"
+    },
+    {
+     "name": "Fort Jesus",
+     "year": 1593,
+     "country": "Kenya",
+     "region": "Africa",
+     "id": "SF1557"
+    },
+    {
+     "name": "Forte dos Reis Magos",
+     "year": 1598,
+     "country": "Brazil",
+     "region": "Americas",
+     "id": "SF1558"
+    },
+    {
+     "name": "Fort Aguada",
+     "year": 1612,
+     "country": "India",
+     "region": "Asia and Oceania",
+     "id": "SF1551"
+    },
+    {
+     "name": "Fortaleza do Monte",
+     "year": 1617,
+     "country": "Macau",
+     "region": "Asia and Oceania",
+     "id": "SF0900"
+    },
+    {
+     "name": "Fortaleza de Santa Teresa",
+     "year": 1762,
+     "country": "Uruguay",
+     "region": "Americas",
+     "id": "SF1021"
+    },
+    {
+     "name": "Fortaleza de São José de Macapá",
+     "year": 1764,
+     "country": "Brazil",
+     "region": "Americas",
+     "id": "SF1555"
+    }
+   ]
+  },
+  {
+   "builder": "Spain",
+   "n": 7,
+   "first_year": 1539,
+   "first_name": "Castillo San Felipe del Morro",
+   "first_country": "Puerto Rico",
+   "forts": [
+    {
+     "name": "Castillo San Felipe del Morro",
+     "year": 1539,
+     "country": "Puerto Rico",
+     "region": "Americas",
+     "id": "SF1548"
+    },
+    {
+     "name": "Morro Castle",
+     "year": 1589,
+     "country": "Cuba",
+     "region": "Americas",
+     "id": "SF0893"
+    },
+    {
+     "name": "Fort Santiago",
+     "year": 1590,
+     "country": "Philippines",
+     "region": "Asia and Oceania",
+     "id": "SF0958"
+    },
+    {
+     "name": "Castillo de San Marcos",
+     "year": 1672,
+     "country": "United States of America",
+     "region": "Americas",
+     "id": "SF0850"
+    },
+    {
+     "name": "Fortaleza del Real Felipe",
+     "year": 1747,
+     "country": "Peru",
+     "region": "Americas",
+     "id": "SF1559"
+    },
+    {
+     "name": "Fortaleza de San Carlos de la Cabaña",
+     "year": 1763,
+     "country": "Cuba",
+     "region": "Americas",
+     "id": "SF0895"
+    },
+    {
+     "name": "Fuerte de San Diego",
+     "year": 1778,
+     "country": "Mexico",
+     "region": "Americas",
+     "id": "SF1550"
+    }
+   ]
+  },
+  {
+   "builder": "Dutch Republic",
+   "n": 8,
+   "first_year": 1611,
+   "first_name": "Fort Belgica",
+   "first_country": "Indonesia",
+   "forts": [
+    {
+     "name": "Fort Belgica",
+     "year": 1611,
+     "country": "Indonesia",
+     "region": "Asia and Oceania",
+     "id": "SF0994"
+    },
+    {
+     "name": "Fort Zeelandia",
+     "year": 1624,
+     "country": "Taiwan",
+     "region": "Asia and Oceania",
+     "id": "SF1543"
+    },
+    {
+     "name": "Fort Amsterdam",
+     "year": 1625,
+     "country": "United States of America",
+     "region": "Americas",
+     "id": "SF1535"
+    },
+    {
+     "name": "Fort Amsterdam (Curaçao)",
+     "year": 1634,
+     "country": "Curaçao",
+     "region": "Americas",
+     "id": "SF1553"
+    },
+    {
+     "name": "Galle Fort",
+     "year": 1649,
+     "country": "Sri Lanka",
+     "region": "Asia and Oceania",
+     "id": "SF0986"
+    },
+    {
+     "name": "Castle of Good Hope",
+     "year": 1666,
+     "country": "South Africa",
+     "region": "Africa",
+     "id": "SF1560"
+    },
+    {
+     "name": "Fort Rotterdam",
+     "year": 1667,
+     "country": "Indonesia",
+     "region": "Asia and Oceania",
+     "id": "SF0996"
+    },
+    {
+     "name": "Jaffna Fort",
+     "year": 1680,
+     "country": "Sri Lanka",
+     "region": "Asia and Oceania",
+     "id": "SF0978"
+    }
+   ]
+  },
+  {
+   "builder": "England",
+   "n": 1,
+   "first_year": 1640,
+   "first_name": "Fort St George",
+   "first_country": "India",
+   "forts": [
+    {
+     "name": "Fort St George",
+     "year": 1640,
+     "country": "India",
+     "region": "Asia and Oceania",
+     "id": "SF1552"
+    }
+   ]
+  },
+  {
+   "builder": "Great Britain",
+   "n": 2,
+   "first_year": 1714,
+   "first_name": "Fort Marlborough",
+   "first_country": "Indonesia",
+   "forts": [
+    {
+     "name": "Fort Marlborough",
+     "year": 1714,
+     "country": "Indonesia",
+     "region": "Asia and Oceania",
+     "id": "SF1556"
+    },
+    {
+     "name": "Fort William",
+     "year": 1758,
+     "country": "India",
+     "region": "Asia and Oceania",
+     "id": "SF1544"
+    }
+   ]
+  },
+  {
+   "builder": "France",
+   "n": 2,
+   "first_year": 1720,
+   "first_name": "Fortress of Louisbourg",
+   "first_country": "Canada",
+   "forts": [
+    {
+     "name": "Fortress of Louisbourg",
+     "year": 1720,
+     "country": "Canada",
+     "region": "Americas",
+     "id": "SF0335"
+    },
+    {
+     "name": "Fort Ticonderoga",
+     "year": 1755,
+     "country": "United States of America",
+     "region": "Americas",
+     "id": "SF1530"
+    }
+   ]
+  },
+  {
+   "builder": "Denmark-Norway",
+   "n": 1,
+   "first_year": 1738,
+   "first_name": "Fort Christiansvaern",
+   "first_country": "United States Virgin Islands",
+   "forts": [
+    {
+     "name": "Fort Christiansvaern",
+     "year": 1738,
+     "country": "United States Virgin Islands",
+     "region": "Americas",
+     "id": "SF1549"
+    }
+   ]
+  },
+  {
+   "builder": "United States",
+   "n": 1,
+   "first_year": 1798,
+   "first_name": "Fort McHenry",
+   "first_country": "United States of America",
+   "forts": [
+    {
+     "name": "Fort McHenry",
+     "year": 1798,
+     "country": "United States of America",
+     "region": "Americas",
+     "id": "SF0661"
+    }
+   ]
+  },
+  {
+   "builder": "Japan",
+   "n": 1,
+   "first_year": 1857,
+   "first_name": "Goryōkaku",
+   "first_country": "Japan",
+   "forts": [
+    {
+     "name": "Goryōkaku",
+     "year": 1857,
+     "country": "Japan",
+     "region": "Asia and Oceania",
+     "id": "SF0569"
+    }
+   ]
+  }
+ ],
+ "colonial_n": 33,
+ "colonial_span": [
+  1535,
+  1857
+ ],
+ "hand_builders": {
+  "Portugal": 15,
+  "Spain": 13,
+  "Dutch Republic": 11,
+  "France": 10,
+  "England": 5,
+  "Denmark-Norway": 5,
+  "Habsburg Monarchy": 4,
+  "Great Britain": 3,
+  "Venice": 3,
+  "Knights of St John": 3,
+  "Florence": 2,
+  "Japan": 1,
+  "United States": 1,
+  "Sweden": 1,
+  "Russia": 1,
+  "Brandenburg": 1,
+  "Electorate of Mainz": 1,
+  "Jülich-Cleves-Berg": 1,
+  "Poland-Lithuania": 1,
+  "Brandenburg-Ansbach": 1,
+  "Savoy": 1
+ },
+ "sizes": {
+  "n": 769,
+  "median_ha": 1.87,
+  "q1_ha": 0.71,
+  "q3_ha": 3.96,
+  "p90_ha": 11.4,
+  "under_2ha_pct": 52.8,
+  "over_10ha": 89,
+  "over_50ha": 9,
+  "median_diameter_m": 228,
+  "median_points": 4,
+  "points_mode": 4,
+  "points_mode_n": 320,
+  "points_mode_pct": 41.6,
+  "points_4_6_pct": 71.9,
+  "points_counts": {
+   "1": 2,
+   "2": 19,
+   "3": 120,
+   "4": 320,
+   "5": 159,
+   "6": 74,
+   "7": 27,
+   "8": 18,
+   "9": 14,
+   "10": 5,
+   "11": 4,
+   "12": 4,
+   "13": 1,
+   "17": 1,
+   "21": 1
+  }
+ },
+ "largest": [
+  {
+   "id": "SF0053",
+   "name": "Twierdza Modlin",
+   "country": "Poland",
+   "area_ha": 228.84,
+   "points": 5,
+   "year": 1806
+  },
+  {
+   "id": "SF0436",
+   "name": "Star fort near Pisa",
+   "country": "Italy",
+   "area_ha": 130.68,
+   "points": 4,
+   "year": null
+  },
+  {
+   "id": "SF0334",
+   "name": "Palmanova",
+   "country": "Italy",
+   "area_ha": 113.79,
+   "points": 8,
+   "year": 1593
+  },
+  {
+   "id": "SF0063",
+   "name": "Naarden",
+   "country": "Netherlands",
+   "area_ha": 103.53,
+   "points": 5,
+   "year": 1673
+  },
+  {
+   "id": "SF0743",
+   "name": "Fort Monroe National Monument",
+   "country": "United States of America",
+   "area_ha": 79.97,
+   "points": 4,
+   "year": 1834
+  },
+  {
+   "id": "SF0677",
+   "name": "Elvas",
+   "country": "Portugal",
+   "area_ha": 68.07,
+   "points": 17,
+   "year": 1643
+  },
+  {
+   "id": "SF0775",
+   "name": "Valletta",
+   "country": "Malta",
+   "area_ha": 66.54,
+   "points": 12,
+   "year": 1566
+  },
+  {
+   "id": "SF0798",
+   "name": "Famagusta within the walls",
+   "country": "Cyprus",
+   "area_ha": 59.3,
+   "points": 7,
+   "year": null
+  },
+  {
+   "id": "SF0170",
+   "name": "Festung Mont Royal",
+   "country": "Germany",
+   "area_ha": 51.05,
+   "points": 3,
+   "year": null
+  },
+  {
+   "id": "SF0761",
+   "name": "Star fort at Rodos",
+   "country": "Greece",
+   "area_ha": 49.52,
+   "points": 7,
+   "year": null
+  },
+  {
+   "id": "SF0277",
+   "name": "Neuf-Brisach",
+   "country": "France",
+   "area_ha": 48.64,
+   "points": 8,
+   "year": 1698
+  },
+  {
+   "id": "SF0084",
+   "name": "Willemstad",
+   "country": "Netherlands",
+   "area_ha": 48.04,
+   "points": 4,
+   "year": 1583
+  }
+ ],
+ "size_by_period": [
+  {
+   "period": "before 1600",
+   "n": 28,
+   "median_ha": 1.45
+  },
+  {
+   "period": "1600s",
+   "n": 40,
+   "median_ha": 2.62
+  },
+  {
+   "period": "1700s",
+   "n": 33,
+   "median_ha": 1.59
+  },
+  {
+   "period": "1800 and after",
+   "n": 71,
+   "median_ha": 2.39
+  }
+ ],
+ "size_year": {
+  "n": 172,
+  "rho": -0.02,
+  "p": 0.795941928100556
+ },
+ "famous": [
+  {
+   "id": "SF0334",
+   "name": "Palmanova",
+   "country": "Italy",
+   "year": 1593,
+   "builder": "Venice",
+   "area_ha": 113.79,
+   "points": 8,
+   "diameter_m": 1292,
+   "perimeter_m": 5042,
+   "wikipedia": "https://en.wikipedia.org/wiki/Palmanova"
+  },
+  {
+   "id": "SF0063",
+   "name": "Naarden",
+   "country": "Netherlands",
+   "year": 1673,
+   "builder": "Dutch Republic",
+   "area_ha": 103.53,
+   "points": 5,
+   "diameter_m": 1582,
+   "perimeter_m": 5623,
+   "wikipedia": "https://en.wikipedia.org/wiki/Naarden"
+  },
+  {
+   "id": "SF0046",
+   "name": "Bourtange",
+   "country": "Netherlands",
+   "year": 1593,
+   "builder": "Dutch Republic",
+   "area_ha": 28.52,
+   "points": 10,
+   "diameter_m": 854,
+   "perimeter_m": 3731,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bourtange"
+  },
+  {
+   "id": "SF0277",
+   "name": "Neuf-Brisach",
+   "country": "France",
+   "year": 1698,
+   "builder": "France",
+   "area_ha": 48.64,
+   "points": 8,
+   "diameter_m": 946,
+   "perimeter_m": 3178,
+   "wikipedia": "https://en.wikipedia.org/wiki/Neuf-Brisach"
+  },
+  {
+   "id": "SF0775",
+   "name": "Valletta",
+   "country": "Malta",
+   "year": 1566,
+   "builder": "Knights of St John",
+   "area_ha": 66.54,
+   "points": 12,
+   "diameter_m": 1414,
+   "perimeter_m": 4791,
+   "wikipedia": "https://en.wikipedia.org/wiki/Valletta"
+  },
+  {
+   "id": "SF0677",
+   "name": "Elvas",
+   "country": "Portugal",
+   "year": 1643,
+   "builder": "Portugal",
+   "area_ha": 68.07,
+   "points": 17,
+   "diameter_m": 1401,
+   "perimeter_m": 4598,
+   "wikipedia": "https://en.wikipedia.org/wiki/Elvas"
+  },
+  {
+   "id": "SF0569",
+   "name": "Goryōkaku",
+   "country": "Japan",
+   "year": 1857,
+   "builder": "Japan",
+   "area_ha": 11.89,
+   "points": 5,
+   "diameter_m": 488,
+   "perimeter_m": 1738,
+   "wikipedia": "https://en.wikipedia.org/wiki/Gory%C5%8Dkaku"
+  }
+ ],
+ "strip": [
+  {
+   "id": "SF0334",
+   "name": "Palmanova",
+   "country": "Italy",
+   "year": 1593,
+   "builder": "Venice",
+   "area_ha": 113.79,
+   "points": 8,
+   "diameter_m": 1292,
+   "perimeter_m": 5042,
+   "wikipedia": "https://en.wikipedia.org/wiki/Palmanova"
+  },
+  {
+   "id": "SF0063",
+   "name": "Naarden",
+   "country": "Netherlands",
+   "year": 1673,
+   "builder": "Dutch Republic",
+   "area_ha": 103.53,
+   "points": 5,
+   "diameter_m": 1582,
+   "perimeter_m": 5623,
+   "wikipedia": "https://en.wikipedia.org/wiki/Naarden"
+  },
+  {
+   "id": "SF0277",
+   "name": "Neuf-Brisach",
+   "country": "France",
+   "year": 1698,
+   "builder": "France",
+   "area_ha": 48.64,
+   "points": 8,
+   "diameter_m": 946,
+   "perimeter_m": 3178,
+   "wikipedia": "https://en.wikipedia.org/wiki/Neuf-Brisach"
+  },
+  {
+   "id": "SF0327",
+   "name": "Alba Carolina Fortress",
+   "country": "Romania",
+   "year": 1715,
+   "builder": "Habsburg Monarchy",
+   "area_ha": 32.43,
+   "points": 6,
+   "diameter_m": 866,
+   "perimeter_m": 3403,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alba_Carolina_Citadel"
+  },
+  {
+   "id": "SF0677",
+   "name": "Elvas",
+   "country": "Portugal",
+   "year": 1643,
+   "builder": "Portugal",
+   "area_ha": 68.07,
+   "points": 17,
+   "diameter_m": 1401,
+   "perimeter_m": 4598,
+   "wikipedia": "https://en.wikipedia.org/wiki/Elvas"
+  },
+  {
+   "id": "SF0084",
+   "name": "Willemstad",
+   "country": "Netherlands",
+   "year": 1583,
+   "builder": "Dutch Republic",
+   "area_ha": 48.04,
+   "points": 4,
+   "diameter_m": 899,
+   "perimeter_m": 3196,
+   "wikipedia": "https://en.wikipedia.org/wiki/Willemstad"
+  },
+  {
+   "id": "SF0608",
+   "name": "Almeida",
+   "country": "Portugal",
+   "year": 1641,
+   "builder": "Portugal",
+   "area_ha": 20.03,
+   "points": 6,
+   "diameter_m": 680,
+   "perimeter_m": 2459,
+   "wikipedia": "https://en.wikipedia.org/wiki/Almeida"
+  },
+  {
+   "id": "SF0132",
+   "name": "Citadel of Lille",
+   "country": "France",
+   "year": 1667,
+   "builder": "France",
+   "area_ha": 27.86,
+   "points": 10,
+   "diameter_m": 715,
+   "perimeter_m": 2586,
+   "wikipedia": "https://en.wikipedia.org/wiki/Citadel_of_Lille"
+  },
+  {
+   "id": "SF0517",
+   "name": "Citadel of Jaca",
+   "country": "Spain",
+   "year": 1592,
+   "builder": "Spain",
+   "area_ha": 3.53,
+   "points": 9,
+   "diameter_m": 279,
+   "perimeter_m": 1554,
+   "wikipedia": "https://en.wikipedia.org/wiki/Citadel_of_Jaca"
+  },
+  {
+   "id": "SF0569",
+   "name": "Goryōkaku",
+   "country": "Japan",
+   "year": 1857,
+   "builder": "Japan",
+   "area_ha": 11.89,
+   "points": 5,
+   "diameter_m": 488,
+   "perimeter_m": 1738,
+   "wikipedia": "https://en.wikipedia.org/wiki/Gory%C5%8Dkaku"
+  },
+  {
+   "id": "SF0661",
+   "name": "Fort McHenry",
+   "country": "United States of America",
+   "year": 1798,
+   "builder": "United States",
+   "area_ha": 0.88,
+   "points": 5,
+   "diameter_m": 146,
+   "perimeter_m": 539,
+   "wikipedia": "https://en.wikipedia.org/wiki/Fort_McHenry"
+  },
+  {
+   "id": "SF0850",
+   "name": "Castillo de San Marcos",
+   "country": "United States of America",
+   "year": 1672,
+   "builder": "Spain",
+   "area_ha": 0.54,
+   "points": 4,
+   "diameter_m": 134,
+   "perimeter_m": 457,
+   "wikipedia": "https://en.wikipedia.org/wiki/Castillo_de_San_Marcos"
+  }
+ ],
+ "famous_rank": {
+  "Palmanova": 3,
+  "Naarden": 4,
+  "Bourtange": 24,
+  "Neuf-Brisach": 11,
+  "Valletta": 7,
+  "Elvas": 6,
+  "Goryōkaku": 71,
+  "Alba Carolina Fortress": 21,
+  "Willemstad": 12,
+  "Almeida": 43,
+  "Citadel of Lille": 28,
+  "Citadel of Jaca": 216,
+  "Fort McHenry": 540,
+  "Castillo de San Marcos": 621
+ },
+ "survival": {
+  "outline_main": 769,
+  "outline_pct": 58.8,
+  "no_outline": 538,
+  "no_outline_pct": 41.2,
+  "hand_n": 84,
+  "hand_with_outline": 39,
+  "hand_with_outline_pct": 46.4,
+  "hand_vanished": 5,
+  "hand_vanished_names": [
+   "Fortress of Louisbourg",
+   "Citadel of Antwerp",
+   "Saarlouis",
+   "Citadel of Turin",
+   "Fort Amsterdam"
+  ],
+  "hand_vanished_outline": [
+   "Fortress of Louisbourg"
+  ],
+  "wd_end": 10,
+  "europe_outline_pct": 56.0,
+  "beyond_outline_pct": 82.4
+ },
+ "density": [
+  {
+   "iso": "MLT",
+   "country": "Malta",
+   "n": 9,
+   "per_10k_km2": 276.34
+  },
+  {
+   "iso": "NLD",
+   "country": "Netherlands",
+   "n": 93,
+   "per_10k_km2": 24.87
+  },
+  {
+   "iso": "BEL",
+   "country": "Belgium",
+   "n": 28,
+   "per_10k_km2": 9.13
+  },
+  {
+   "iso": "SWE",
+   "country": "Sweden",
+   "n": 297,
+   "per_10k_km2": 6.66
+  },
+  {
+   "iso": "PRT",
+   "country": "Portugal",
+   "n": 47,
+   "per_10k_km2": 5.14
+  },
+  {
+   "iso": "DNK",
+   "country": "Denmark",
+   "n": 21,
+   "per_10k_km2": 4.92
+  },
+  {
+   "iso": "ITA",
+   "country": "Italy",
+   "n": 88,
+   "per_10k_km2": 2.92
+  },
+  {
+   "iso": "FRA",
+   "country": "France",
+   "n": 170,
+   "per_10k_km2": 2.67
+  },
+  {
+   "iso": "CZE",
+   "country": "Czech Republic",
+   "n": 19,
+   "per_10k_km2": 2.41
+  },
+  {
+   "iso": "AUT",
+   "country": "Austria",
+   "n": 18,
+   "per_10k_km2": 2.14
+  }
+ ],
+ "densest_cell": {
+  "lon": 5,
+  "lat": 51,
+  "n": 39,
+  "country": "Netherlands"
+ },
+ "sweden": {
+  "n": 297,
+  "catalogue": 295
+ },
+ "europe_cells": 512
+}

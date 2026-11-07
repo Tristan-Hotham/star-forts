@@ -1,0 +1,132 @@
+<!-- wp:paragraph -->
+<p><em>Around 1500, Italian engineers drew a new shape for a fortress: a ring of angled bastions that, seen from above, makes a star. I mapped {{counts.main|int}} of them in ink, from Palmanova to Hakodate, and tried to work out how the idea travelled. It did not creep out of Italy. It sailed.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/star-forts/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.24043680">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>If you have ever looked down on Naarden or Palmanova from a plane, or on Bourtange in a photo, you have seen the shape: a town or a fort inside a star of earth and water. It is the answer to a problem gunpowder set. Tall medieval walls and round towers shattered under cannon, and round towers had blind spots at their feet. The Italian solution was a low, thick rampart with bastions pushed out at the corners, each angled so that its guns could sweep the faces of its neighbours. Nothing could hide under the wall. It was called the trace italienne, and for three and a half centuries it was the way to fortify anything worth keeping.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I wanted to see the whole family at once. The Inked World, my hand-inked map of the whole world, already finds star forts in OpenStreetMap by their shape, so I started there, added the forts that Wikidata knows about, and put them all on the same ink map with a slider for the decades.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_belt.png|Ink map of Europe and the Mediterranean on parchment, with black coasts and blue ripple lines, dotted with hundreds of small pen-drawn stars, thickest in the Low Countries, along the Rhine, in northern Italy, in Portugal and on the coasts of Sweden|The star fort belt: every fort on the map in Europe and around the Mediterranean.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A belt across Europe</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{counts.europe_pct|pc}} of the forts are in Europe, and they form a belt along the places people fought over: the Low Countries and northern France, the Rhine, the Alps, the Venetian and Habsburg frontiers with the Ottomans, the border between Spain and Portugal, and the Baltic coasts. The busiest one-degree square on the map, around the mouths of the Rhine and the Maas, holds {{densest_cell.n|int}} forts. Malta has the most for its size by a long way: {{density.0.n|int}} forts on islands smaller than the Isle of Wight.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some of the pattern is about who has written things down. Sweden has more forts on the map than any other country, {{sweden.n|int}}, because its heritage register lists hundreds of small redoubts and sconces that went into Wikidata in bulk. A further {{counts.bavarian|int}} Bavarian monuments labelled as sconces are of such uncertain age and shape that I left them out altogether. And the shape test that finds the stars also finds look-alikes, such as the towered walls of Chinese towns and Rajput forts, so I set aside {{counts.lookalike|int}} outlines in those countries too. You can switch both groups back on in the map and judge for yourself.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Dates are the hard part</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Only {{dates.dated|int}} of the {{counts.main|int}} forts have a date I can use for their bastions. Wikidata and OpenStreetMap supply {{dates.nonhand|int}}, which is barely {{dates.nonhand_pct|pc}}. So I went through English Wikipedia and dated {{dates.hand|int}} of the most important forts by hand: the year the bastioned works were begun, who built them, and whether they still stand. That makes the dated set lean towards the famous, and it is worth keeping in mind for everything that follows.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_decades.png|Bar chart of dated star forts by decade from 1480 to 1910, dark brown for Europe and red for beyond Europe, with peaks in the 1590s, the 1670s and the 1870s and a burst of red bars in the 1750s and 1760s|When the dated forts were begun, by decade.}}
+
+<!-- wp:paragraph -->
+<p>Even so, the rhythm is clear. There is a first wave in the decades either side of 1600, when Venice founded Palmanova and the Dutch built Bourtange; a second in the 1670s, the decade of Vauban's France and the rebuilding of Naarden; a burst beyond Europe in the 1750s and 1760s, the years of the Seven Years' War; and a late peak in the 1870s, when polygonal forts carried the old idea into the age of rifled guns.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">It went by sea</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The obvious story would be a slow ripple out of Italy: Florence first, then France, the Low Countries, Germany, and the far edges of Europe last. The data say otherwise. The earliest dated works are Italian, but within a few years of the Fortezza da Basso in Florence (1534) there were bastions at Diu in India (1535), at San Juan in Puerto Rico (1539) and at Mazagan in Morocco (1541), as early as at Jülich in Germany (1548) or Berwick on the Scottish border (1558).</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_first.png|World map in ink on parchment with each country shaded by the period of its first dated star fort, darkest red for before 1550: Italy, India, Indonesia, Morocco, Puerto Rico, the Netherlands and Germany among the earliest, with all the forts as tiny black stars concentrated in Europe|Where the bastion arrived, and when: each country by its first dated fort in the data.}}
+
+<!-- wp:paragraph -->
+<p>Measured country by country, distance from Florence hardly predicts when the first dated fort appears: the rank correlation is {{diffusion.rho|raw}} across {{diffusion.n|int}} countries, close to nothing. The median first date for countries beyond Europe, {{diffusion.median_first_beyond|raw}}, is no later than for the countries of Europe, {{diffusion.median_first_europe|raw}}. Portuguese and Spanish ships carried the star fort to three continents as fast as the overland routes carried it to the north of Europe.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>The bastion reached India, Morocco and the Caribbean in the same decades it reached Germany, England and Sweden.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+{{IMG|b_chain.png|Timeline of {{colonial_n|int}} hand-dated star forts outside Europe, one row each in order of the year begun, from Diu in India in 1535 to Goryokaku in Japan in 1857, coloured by builder: Portugal and Spain first, then the Dutch, the English and British, France, Denmark, the United States and Japan|The colonial chain: hand-dated star forts outside Europe, coloured by builder.}}
+
+<!-- wp:paragraph -->
+<p>The order of the colonial forts follows the order of the empires. Portugal came first, fortifying its trading posts round the Indian Ocean: Diu, Mazagan, Mozambique Island, Daman and Fort Jesus at Mombasa, designed by the Milanese engineer Giovanni Battista Cairati. Spain fortified the gates of its treasure fleets at San Juan, Havana and Manila. Then the Dutch East India Company, from the Banda Islands in 1611 to the Castle of Good Hope in Cape Town in 1666; the English at Madras in 1640; France at Louisbourg on Cape Breton Island; Denmark on St Croix. The last link is the one I like best: Goryōkaku at Hakodate, begun by the Tokugawa shogunate in 1857 as a five-pointed star on the French model, just as rifled artillery was making the whole idea obsolete.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Mostly small, a few whole towns</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Inside the {{sizes.n|int}} outlines traced in OpenStreetMap, the median star fort covers {{sizes.median_ha|f1}} hectares, about {{sizes.median_diameter_m|int}} m across: a fort, not a town. The commonest shape is the square with four bastions ({{sizes.points_mode_pct|pc}}), then the pentagon. The famous fortress towns are the exceptions. Palmanova encloses {{famous.0.area_ha|f1}} hectares inside its outline as mapped, Naarden {{famous.1.area_ha|f1}}, and Elvas, on the Portuguese border, has {{famous.5.points|int}} points around {{famous.5.area_ha|f1}} hectares. Nor did forts grow over time: among the dated outlines there is no trend in size from one century to the next.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_strip.png|Twelve star fort outlines drawn in black ink with a blue moat at one scale on parchment: Palmanova, Naarden, Neuf-Brisach, Elvas and Valletta large, Jaca, Lille, Almeida, Galle and Goryokaku middling, Fort McHenry and Castillo de San Marcos tiny|Twelve star forts at one scale, from their OpenStreetMap outlines.}}
+
+<!-- wp:paragraph -->
+<p>Star forts were built to be hard to get rid of, and many of them still shape a town plan, a park or a ring of canals. {{survival.outline_pct|pc}} of the forts on the map have an outline that my shape test still recognises as a star. That is not the same as survival, since a fort can survive but be mapped in pieces, but some famous ones really have gone: the citadels of Antwerp and Turin, most of Saarlouis, and Fort Amsterdam at the tip of Manhattan.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The outlines come from The Inked World, which searched OpenStreetMap for forts, town walls and moats and kept the closed shapes with at least four sharp corners standing out evenly from the centre, with re-entrant angles between them. I matched each outline to the OpenStreetMap features on it for names and start dates, added Wikidata's star forts, sconces and fortified towns, and dated {{dates.hand|int}} forts by hand from English Wikipedia. Each fort takes the hand date if there is one, then a Wikidata start or opening date, then a Wikidata inception precise to the decade or year, then OpenStreetMap's start date; anything before 1450 is the medieval origin of a site, not its bastions. The map draws on The Inked World engine: tap any fort for its date, the source of that date and links to its photographs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The caveats matter. This is a map of what has been mapped and catalogued, which is far from everything that was built; most forts have no date; the dated ones are the famous ones; and the shape test both misses some forts and finds a few that are not bastions at all.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/star-forts/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.24043680">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/star-forts">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Fort outlines, names and start dates: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL 1.0), as prepared for <a href="https://maps.tristanhotham.com/ink-map/">The Inked World</a>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Star forts, sconces, fortified towns and their dates: <a href="https://www.wikidata.org/">Wikidata</a> (CC0), queried with QLever.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Dates, builders and fates of {{dates.hand_rows|int}} forts: English Wikipedia (CC BY-SA 4.0), one article each, linked from the map and listed in the data.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Countries and towns: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain). Background reading: Geoffrey Parker, The Military Revolution (1988); Christopher Duffy, Siege Warfare (1979).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

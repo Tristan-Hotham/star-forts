@@ -1,0 +1,81 @@
+iso,country,region,n,outlines,dated,first_year,first_name,first_src,first_id,km_from_florence
+SWE,Sweden,Scandinavia and the Baltic,297,2,7,1559,Landskrona Citadel,Wikidata inception,SF1328,1350
+FRA,France,France,170,169,30,1553,Fort-Carré,Wikidata inception,SF0453,333
+NLD,Netherlands,Low Countries,93,27,12,1547,Fort Rammekens,Wikidata inception,SF0093,1026
+ITA,Italy,Italy and Malta,88,83,29,1488,Cassero della Fortezza,Wikidata inception,SF0465,35
+POL,Poland,German lands and Central Europe,66,34,14,1580,Zamość,Wikipedia,SF1470,1187
+DEU,Germany,German lands and Central Europe,60,23,14,1548,Citadel of Jülich,Wikipedia,SF1467,876
+ESP,Spain,Iberia,55,54,3,1571,Citadel of Pamplona,Wikipedia,SF0508,1049
+PRT,Portugal,Iberia,47,46,11,1553,Fort of São Julião da Barra,Wikipedia,SF1536,1806
+USA,United States of America,Americas,39,37,18,1625,Fort Amsterdam,Wikipedia,SF1535,6699
+UKR,Ukraine,"Eastern Europe, Balkans and Turkey",30,30,3,1736,Піщана Самара,OpenStreetMap start_date,SF0252,1909
+BEL,Belgium,Low Countries,28,13,7,1567,Citadel of Antwerp,Wikipedia,SF1446,973
+GBR,United Kingdom,British Isles,26,21,12,1558,Berwick-upon-Tweed walls,Wikipedia,SF1331,1633
+DNK,Denmark,Scandinavia and the Baltic,21,1,4,1626,Kastellet,Wikipedia,SF1337,1329
+CZE,Czech Republic,German lands and Central Europe,19,17,2,1780,Josefov,Wikipedia,SF1479,811
+AUT,Austria,German lands and Central Europe,18,5,2,1642,Neue Schanze (Lochau),Wikidata inception,SF1523,432
+GRC,Greece,"Eastern Europe, Balkans and Turkey",16,16,0,,,,,
+NOR,Norway,Scandinavia and the Baltic,15,8,6,1660,Fredriksten fortress,Wikidata inception,SF0018,1707
+RUS,Russia,"Eastern Europe, Balkans and Turkey",15,14,3,1703,Peter and Paul Fortress,Wikipedia,SF1072,2208
+CAN,Canada,Americas,14,13,8,1629,Fort Anne,Wikidata inception,SF1529,5874
+BRA,Brazil,Americas,12,10,6,1598,Forte dos Reis Magos,Wikipedia,SF1558,7206
+SRB,Serbia,"Eastern Europe, Balkans and Turkey",12,10,1,1692,Petrovaradin Fortress,Wikipedia,SF1527,702
+HRV,Croatia,"Eastern Europe, Balkans and Turkey",11,11,3,1712,Tvrđa,Wikidata inception,SF0358,621
+IDN,Indonesia,Asia and Oceania,11,10,5,1522,Fort Kastela,OpenStreetMap start_date,SF0991,12002
+MLT,Malta,Italy and Malta,9,8,5,1552,Fort St Elmo,Wikipedia,SF0774,918
+ROU,Romania,"Eastern Europe, Balkans and Turkey",9,9,2,1715,Alba Carolina Fortress,Wikipedia,SF0327,1002
+TUR,Turkey,"Eastern Europe, Balkans and Turkey",8,8,1,1872,Small Kiremitlik Redoubt,OpenStreetMap start_date,SF0635,2509
+FIN,Finland,Scandinavia and the Baltic,7,3,4,1748,Suomenlinna,Wikipedia,SF1066,2040
+IRL,Ireland,British Isles,7,5,2,1677,Charles Fort,Wikipedia,SF0082,1712
+HUN,Hungary,German lands and Central Europe,6,5,0,,,,,
+IND,India,Asia and Oceania,6,1,5,1535,Diu Fort,Wikipedia,SF1545,6026
+LKA,Sri Lanka,Asia and Oceania,6,5,5,1623,Fort Frederick,Wikidata inception,SF0980,7746
+JPN,Japan,Asia and Oceania,5,2,3,1857,Goryōkaku,Wikipedia,SF0569,9250
+SVK,Slovakia,German lands and Central Europe,5,5,0,,,,,
+BIH,Bosnia and Herzegovina,"Eastern Europe, Balkans and Turkey",4,4,0,,,,,
+CUB,Cuba,Americas,4,4,2,1589,Morro Castle,Wikipedia,SF0893,8528
+LUX,Luxembourg,Low Countries,4,4,0,,,,,
+PER,Peru,Americas,4,3,1,1747,Fortaleza del Real Felipe,Wikipedia,SF1559,10805
+PHL,Philippines,Asia and Oceania,4,4,3,1565,Fort San Pedro,Wikidata inception,SF0976,10967
+BGR,Bulgaria,"Eastern Europe, Balkans and Turkey",3,3,0,,,,,
+EST,Estonia,Scandinavia and the Baltic,3,3,0,,,,,
+AGO,Angola,Africa,2,2,0,,,,,
+ALB,Albania,"Eastern Europe, Balkans and Turkey",2,2,0,,,,,
+CHE,Switzerland,German lands and Central Europe,2,2,0,,,,,
+CYP,Cyprus,"Eastern Europe, Balkans and Turkey",2,1,1,1567,Venetian walls of Nicosia,Wikipedia,SF1541,2116
+MAR,Morocco,Africa,2,1,1,1541,Mazagan,Wikipedia,SF1542,2070
+MEX,Mexico,Americas,2,0,2,1776,San Carlos Fortress,Wikidata inception,SF1547,9907
+MOZ,Mozambique,Africa,2,2,1,1558,Fort São Sebastião,Wikipedia,SF1011,7192
+URY,Uruguay,Americas,2,2,2,1737,Fuerte San Miguel,Wikidata inception,SF1020,10824
+VIR,United States Virgin Islands,Americas,2,1,1,1738,Fort Christiansvaern,Wikipedia,SF1549,7540
+VNM,Vietnam,Asia and Oceania,2,2,1,1809,Quảng Trị Citadel,Wikidata inception,SF0936,9190
+ARM,Armenia,"Eastern Europe, Balkans and Turkey",1,1,1,1837,Star fort at Gyumri,OpenStreetMap start_date,SF0607,2682
+AUS,Australia,Asia and Oceania,1,1,0,,,,,
+AZE,Azerbaijan,"Eastern Europe, Balkans and Turkey",1,1,0,,,,,
+BWA,Botswana,Africa,1,1,0,,,,,
+CHL,Chile,Americas,1,1,0,,,,,
+CPV,Cape Verde,Africa,1,1,0,,,,,
+CUW,Curaçao,Americas,1,0,1,1634,Fort Amsterdam (Curaçao),Wikipedia,SF1553,8296
+DMA,Dominica,Americas,1,1,0,,,,,
+ERI,Eritrea,Africa,1,1,0,,,,,
+FRO,Faroe Islands,"Eastern Europe, Balkans and Turkey",1,1,1,1580,Skansin,Wikidata inception,SF0005,2343
+GHA,Ghana,Africa,1,1,0,,,,,
+GNB,Guinea-Bissau,Africa,1,1,0,,,,,
+HKG,Hong Kong,Asia and Oceania,1,1,0,,,,,
+JAM,Jamaica,Americas,1,1,0,,,,,
+JEY,Jersey,British Isles,1,1,0,,,,,
+KEN,Kenya,Africa,1,0,1,1593,Fort Jesus,Wikipedia,SF1557,6031
+KNA,Saint Kitts and Nevis,Americas,1,1,0,,,,,
+LTU,Lithuania,Scandinavia and the Baltic,1,0,0,,,,,
+MAC,Macau,Asia and Oceania,1,1,1,1617,Fortaleza do Monte,Wikipedia,SF0900,9247
+MCO,Monaco,France,1,1,0,,,,,
+MDG,Madagascar,Africa,1,1,0,,,,,
+MNE,Montenegro,"Eastern Europe, Balkans and Turkey",1,1,1,1884,Fort Gorazda,Wikidata inception,SF0534,628
+MYS,Malaysia,Asia and Oceania,1,1,0,,,,,
+PRI,Puerto Rico,Americas,1,0,1,1539,Castillo San Felipe del Morro,Wikipedia,SF1548,7601
+SEN,Senegal,Africa,1,1,0,,,,,
+SUR,Suriname,Americas,1,1,0,,,,,
+THA,Thailand,Asia and Oceania,1,1,0,,,,,
+TWN,Taiwan,Asia and Oceania,1,0,1,1624,Fort Zeelandia,Wikipedia,SF1543,9657
+VEN,Venezuela,Americas,1,1,0,,,,,
+ZAF,South Africa,Africa,1,0,1,1666,Castle of Good Hope,Wikipedia,SF1560,8670

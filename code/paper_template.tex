@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array,xcolor,longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[round]{natbib}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={The Star Fort Belt: How the Bastion Spread Around the World},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries The Star Fort Belt\par}
+\vspace{0.4em}
+{\large How the bastion spread around the world:\\outlines, dates and sizes of {{counts.main|int}} star forts from open data\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: https://doi.org/10.5281/zenodo.24043680\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+The bastioned fortification, or trace italienne, was devised in Italy around 1500 and built from the Low Countries to Japan over the next three and a half centuries. I assemble an open catalogue of {{counts.main|int}} star forts in {{counts.countries|int}} countries: {{counts.outlines|int}} bastioned outlines found by shape in OpenStreetMap, {{counts.catalogue|int}} further forts catalogued in Wikidata, and {{counts.hand_added|int}} famous forts added from English Wikipedia, after setting aside {{counts.lookalike|int}} outlines that are probably towered walls of other traditions and {{counts.bavarian|int}} Bavarian listed earthworks of uncertain form. Only {{dates.dated|int}} forts ({{dates.dated_pct|pc}}) can be dated, {{dates.hand|int}} of them by hand. {{counts.europe_pct|pc}} of the forts lie in Europe, in a belt along the war zones from the Low Countries to the Baltic. The earliest dated works are Italian, but the bastion did not spread outwards from Italy: a country's distance from Florence barely predicts the date of its first dated fort (Spearman's $\rho$ = {{diffusion.rho|raw}}, {{diffusion.n|int}} countries), and the median first date is {{diffusion.median_first_beyond|raw}} for countries beyond Europe against {{diffusion.median_first_europe|raw}} within it, because Portuguese and Spanish ships carried it to India, Africa and the Caribbean in the 1530s and 1540s. The traced outlines are small (median {{sizes.median_ha|f1}} ha, about {{sizes.median_diameter_m|int}} m across) and most often have four points ({{sizes.points_mode_pct|pc}}); size does not change with date. {{survival.outline_pct|pc}} of the catalogued forts still have an outline that a shape test recognises.
+
+\textbf{Keywords:} star fort; bastion; trace italienne; military architecture; diffusion; OpenStreetMap; Wikidata; historical GIS
+\end{quote}
+
+\section{Introduction}
+Between the 1490s and the 1530s Italian engineers answered the siege gun with a new kind of wall: low, thick and angled, with projecting bastions placed so that every face could be swept by fire from a neighbour. The resulting star-shaped trace, the trace italienne, became the standard fortification of early modern Europe and of the European empires, and historians have tied it to the growth of armies, the cost of war and the reach of European power overseas \citep{parker,duffy}. Its spread is usually told through famous examples: Michele Sanmicheli's Verona, the ideal city of Palmanova, the Dutch fortress belt, Vauban's France, and the colonial forts from Goa to Havana.
+
+This study asks what an open, systematic catalogue can add. Where are the star forts that survive or are recorded? When were they built, and how far can the dates be trusted? Did the design spread outward from Italy, or did it jump? How large were they, how many points did they have, and how many survive on the ground? The work accompanies an interactive map drawn on The Inked World basemap \citep{inkmap} at \url{{{meta.page}}}, with a decade slider and every fort's sources.
+
+\section{Data}
+\textbf{Outlines.} The forts come from The Inked World \citep{inkmap}, which extracted from OpenStreetMap \citep{osm} every way and relation tagged as a fort or fortification, every town wall and every moat, joined broken walls and moats into rings, and kept the rings that look like a bastioned trace (Section~\ref{sec:methods}). This gives {{counts.outline_in|int}} outlines. It also added {{counts.catalogue_in|int}} forts from Wikidata \citep{wikidata} that belong to the classes star fort (Q12797), sconce (Q91203, Q6653030) or polygonal fort (Q92080) but have no traced outline.
+
+\textbf{Dates and names.} For every Wikidata item I queried, with QLever, the inception (P571) with its precision, start time (P580), official opening (P1619), dissolution or demolition (P576), classes and architect, and the full list of items under star fort and fortified town (Q677678) with coordinates and dates. From the OpenStreetMap extract I read the name, \texttt{wikidata} and \texttt{start\_date} tags of every element lying on each outline. Finally, I dated {{dates.hand_rows|int}} important forts by hand from their English Wikipedia articles \citep{wikipedia}, recording the year the bastioned works were begun, the builder, and whether the works survive (Appendix, Table~\ref{tab:hand}). Countries and town names come from Natural Earth \citep{ne}.
+
+\section{Methods}\label{sec:methods}
+\subsection{Finding a star}
+A ring counts as bastioned when, simplified to 4 m, it has a perimeter between 250 m and 20 km, fills between 45\% and 93\% of its convex hull, and has at least four salient corners: convex corners sharper than 100 degrees that lie further from the centre than their neighbours, at distances from the centre that vary by no more than a quarter, with at least as many re-entrant corners between them. Rings named or catalogued as star forts or sconces need only three. I keep the number of salients as the fort's ``points''. Because rings joined from broken walls and moats are made with round buffers that soften the bastion points, the maps and Figure~\ref{fig:strip} draw each fort from its own wall, rampart and moat pieces at full detail instead; the rings are used only to find and measure the forts. Its area, perimeter and largest diameter are measured on a local plane.
+
+\subsection{Cleaning the catalogue}
+Catalogue points lying on an outline were merged into it ({{counts.merged|int}}), and Wikidata fortified towns lying inside an outline gave it their name and identifier. Outlines with no name in either source ({{counts.unnamed_outlines|int}}) are named after the nearest Natural Earth town. Two groups are kept in the data but left out of every count: {{counts.bavarian|int}} entries from the Bavarian monument list that Wikidata labels as sconces, whose form and age are unknown; and {{counts.lookalike|int}} outlines in countries where the shape test mostly finds fortifications of other traditions (the towered walls of Chinese and Korean towns, Mughal and Rajput forts, North African medinas, Persian and Central Asian forts), unless dated by hand as a European work, together with a few known false matches such as Maginot Line blocks. The result is {{counts.main|int}} forts: {{counts.outlines|int}} with an outline, {{counts.catalogue|int}} Wikidata points and {{counts.hand_added|int}} points added from Wikipedia.
+
+\subsection{Choosing a date}
+Each fort takes the first available of: the hand date; Wikidata's start time or opening; Wikidata's inception if precise to the year or decade; the OpenStreetMap start date. Dates before {{meta.first_year|raw}} are the medieval origin of a site rather than its bastions and are set aside ({{dates.medieval_only|int}} forts), as are inceptions of monasteries and decade-precision inceptions before 1550. A country's first fort is its earliest dated fort in the data, and its distance is the great-circle distance from Florence to that fort. Diffusion is tested with Spearman's rank correlation between first year and distance.
+
+\section{Results}
+\subsection{The belt}
+{{counts.europe|int}} of the {{counts.main|int}} forts ({{counts.europe_pct|pc}}) are in Europe (Figure~\ref{fig:belt}). They form a belt along the early modern war zones: the Low Countries and northern France, the Rhine, the Alps and the Po valley, the Venetian and Habsburg frontiers, the border between Spain and Portugal, and the Baltic. The densest one-degree cell, in the {{densest_cell.country|raw}} around the Rhine and Maas delta, holds {{densest_cell.n|int}} forts. Malta has the highest density by far, then the Netherlands ({{density.1.per_10k_km2|f1}} per 10,000 km$^2$) and Belgium ({{density.2.per_10k_km2|f1}}). Sweden has the most forts of any country ({{sweden.n|int}}), but {{sweden.catalogue|int}} of them are small sconces catalogued from the national heritage register, a reminder that the catalogue measures recording as well as building (Table~\ref{tab:countries}).
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_belt.png}
+\caption{Star forts in Europe and around the Mediterranean, by whether an outline is traced in OpenStreetMap.}\label{fig:belt}\end{figure}
+
+{{TABLE_COUNTRIES}}
+
+\subsection{Dates}
+{{dates.dated|int}} forts ({{dates.dated_pct|pc}}) have a date: {{dates.hand|int}} by hand, {{dates.wikidata|int}} from Wikidata and {{dates.osm|int}} from OpenStreetMap. Without the hand dates only {{dates.nonhand_pct|pc}} would be dated. Of the dated forts, {{dates.before_1600_pct|pc}} were begun before 1600, {{dates.y1600_1699_pct|pc}} in the 1600s, {{dates.y1700_1799_pct|pc}} in the 1700s and {{dates.from_1800_pct|pc}} from 1800, when polygonal forts with low bastions or caponiers continued the type (Figure~\ref{fig:decades}). The dated forts peak in the 1590s, the 1670s and the 1870s; the dated forts beyond Europe peak in the 1750s and 1760s, the decades of the Seven Years' War.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_decades.png}
+\caption{Dated star forts by decade begun, in Europe and beyond.}\label{fig:decades}\end{figure}
+
+\subsection{Diffusion}
+The earliest dated works in the data are Italian, {{regions.0.first_name|raw}} ({{regions.0.first_year|raw}}) and the Fortezza da Basso in Florence (1534). Table~\ref{tab:regions} gives the earliest dated fort in each region. The design reached the Low Countries, the German lands, England and Sweden in the 1540s and 1550s, but it reached India, Morocco and Puerto Rico in the same decades (Figure~\ref{fig:first}). Across the {{diffusion.n|int}} countries with a dated fort, distance from Florence barely predicts the date of the first one ($\rho$ = {{diffusion.rho|raw}}, $p$ = {{diffusion.p|f2}}; within Europe $\rho$ = {{diffusion.rho_europe|raw}} across {{diffusion.n_europe|int}} countries, $p$ = {{diffusion.p_europe|f2}}). Countries beyond Europe have a median first date of {{diffusion.median_first_beyond|raw}}, against {{diffusion.median_first_europe|raw}} in Europe (Figure~\ref{fig:distance}). The bastion travelled by sea, with the Portuguese and Spanish empires, as fast as it travelled by land.
+
+{{TABLE_REGIONS}}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_first.png}
+\caption{Countries by the period of their first dated star fort in the data. Brown-grey: forts present, none dated.}\label{fig:first}\end{figure}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_distance.png}
+\caption{Year of each country's first dated star fort against its distance from Florence.}\label{fig:distance}\end{figure}
+
+\subsection{The colonial chain}
+{{colonial_n|int}} of the hand-dated forts are outside Europe (Figure~\ref{fig:chain}). Their order follows the empires: Portugal from Diu (1535), Spain from San Juan (1539), the Dutch East India Company from Banda Neira (1611), the English East India Company from Madras (1640), France on Cape Breton Island (1720), Denmark on St Croix (1738), the United States at Baltimore (1798) and, last, the Tokugawa shogunate at Hakodate (1857). The selection is mine and favours famous forts, so the chain is an illustration rather than a measurement.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_chain.png}
+\caption{Hand-dated star forts outside Europe, in order of the year begun, coloured by builder.}\label{fig:chain}\end{figure}
+
+\subsection{Size and form}
+The {{sizes.n|int}} outlines have a median area of {{sizes.median_ha|f1}} ha (interquartile range {{sizes.q1_ha|f1}} to {{sizes.q3_ha|f1}} ha) and a median diameter of {{sizes.median_diameter_m|int}} m; {{sizes.under_2ha_pct|pc}} enclose less than 2 ha, {{sizes.over_10ha|int}} more than 10 ha and {{sizes.over_50ha|int}} more than 50 ha (Figure~\ref{fig:sizes}). Four points is the commonest form ({{sizes.points_mode_n|int}} outlines, {{sizes.points_mode_pct|pc}}), and {{sizes.points_4_6_pct|pc}} have four, five or six. The largest outlines are fortress towns and nineteenth-century ring fortresses (Table~\ref{tab:largest}). Among the dated outlines, size does not change with date ($\rho$ = {{size_year.rho|raw}}, {{size_year.n|int}} forts): the median is {{size_by_period.0.median_ha|f1}} ha before 1600, {{size_by_period.1.median_ha|f1}} ha in the 1600s, {{size_by_period.2.median_ha|f1}} ha in the 1700s and {{size_by_period.3.median_ha|f1}} ha from 1800. Figure~\ref{fig:strip} draws twelve famous outlines at one scale.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_sizes.png}
+\caption{Area inside the traced outlines (log scale) and number of salient points.}\label{fig:sizes}\end{figure}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_strip.png}
+\caption{Twelve star forts at one scale, from their OpenStreetMap outlines.}\label{fig:strip}\end{figure}
+
+{{TABLE_LARGEST}}
+
+\subsection{Survival}
+{{survival.outline_pct|pc}} of the forts have an outline that the shape test still recognises; the share is {{survival.europe_outline_pct|pc}} in Europe and {{survival.beyond_outline_pct|pc}} beyond it, where the catalogue is made mostly of large, well-known forts. Of the {{survival.hand_n|int}} hand-dated forts, {{survival.hand_with_outline_pct|pc}} have a traced outline; {{survival.hand_vanished|int}} are known to have been largely demolished (the citadels of Antwerp and Turin, Saarlouis, Fort Amsterdam on Manhattan and Louisbourg, the last partly rebuilt). A missing outline is not proof of loss: it can also mean a fort mapped in pieces, or one too eroded or too irregular to pass the test.
+
+\section{Limitations}
+First, the catalogue is what has been mapped and catalogued. OpenStreetMap is richest in Europe; Wikidata's sconces come in bulk from a few national registers (Sweden, Bavaria, the Netherlands); and countless earthwork sconces and siege works left no trace. Second, the shape test both misses forts (irregular traces, forts mapped as fragments, coastal forts that use the shore) and finds look-alikes; I removed the look-alikes by country, a blunt rule that also removes some genuine forts. Third, only a fifth of the forts are dated, and the hand-dated ones are a selection of famous forts, so the timeline and the colonial chain lean to the well known. Fourth, inception dates can refer to a site's first fortification rather than its bastions. Fifth, the area of a fort is the area inside the line the shape test found, sometimes the inner rampart and sometimes the outer edge of a moat. Sixth, the country of each fort is its modern country.
+
+\section{Conclusion}
+Seen as data, the star fort is a European belt with a long colonial tail. The dated record, thin as it is, shows the design leaving Italy by two routes at once: overland to the war zones of northern Europe, and by sea to the Portuguese and Spanish ports of three continents, where it arrived as early as it did in much of Europe. Most forts were small and square or pentagonal; a few were towns. Two in five no longer show their star to a shape test.
+
+\section*{Data and code availability}
+The interactive map is at \url{{{meta.page}}}. Data and code are at \url{{{meta.repo}}} and archived with this paper at https://doi.org/10.5281/zenodo.24043680. Tables derived from OpenStreetMap (the outlines and the fort table) are released under the Open Database License 1.0; Wikidata content is CC0; text and figures are CC BY 4.0 and code MIT.
+
+\section*{AI statement}
+{{AI}}
+
+\begin{thebibliography}{9}
+\bibitem[Duffy(1979)]{duffy} Duffy, C. (1979) \textit{Siege Warfare: the Fortress in the Early Modern World, 1494 to 1660}. London: Routledge.
+\bibitem[Hotham(2026)]{inkmap} Hotham, T. (2026) The Inked World: a zoomable hand-inked style world map from open data. \url{https://maps.tristanhotham.com/ink-map/}
+\bibitem[Natural Earth(2026)]{ne} Natural Earth (2026) Admin 0 countries, land and populated places. Public domain. \url{https://www.naturalearthdata.com/}
+\bibitem[OpenStreetMap(2026)]{osm} OpenStreetMap contributors (2026) OpenStreetMap, via the Overpass API. ODbL 1.0. \url{https://www.openstreetmap.org/}
+\bibitem[Parker(1988)]{parker} Parker, G. (1988) \textit{The Military Revolution: Military Innovation and the Rise of the West, 1500 to 1800}. Cambridge: Cambridge University Press.
+\bibitem[Wikidata(2026)]{wikidata} Wikidata contributors (2026) Wikidata, queried with QLever. CC0. \url{https://www.wikidata.org/}
+\bibitem[Wikipedia(2026)]{wikipedia} Wikipedia contributors (2026) English Wikipedia articles on the forts listed in Table~\ref{tab:hand}. CC BY-SA 4.0. \url{https://en.wikipedia.org/}
+\end{thebibliography}
+
+\clearpage
+\appendix
+\section{The hand-dated forts}
+{{TABLE_HAND}}
+\end{document}
