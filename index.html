@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The star fort belt | How the bastion spread around the world</title>
+<meta name="description" content="1,307 star forts on a hand-inked world map: where the bastioned fortress went between 1500 and 1900, from Florence and Palmanova to Goa, Havana, Cape Town and Hakodate, with a timeline, real outlines and the honest share that can be dated.">
+<meta property="og:title" content="The star fort belt: how the bastion spread around the world">
+<meta property="og:description" content="1,307 star forts drawn in ink by their real outlines, with a decade slider from 1480 to 1900.">
+<meta property="og:image" content="https://maps.tristanhotham.com/star-forts/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/star-forts/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=MedievalSharp&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>
+/* Parchment, iron-gall black, vermilion and river blue: the palette of The Inked World. */
+:root{
+  --bg:#F6EED8; --panel:#EFE3C4; --fg:#2B2119; --muted:#6E604E; --rule:#E2D3AE; --card:#FBF5E4; --border:#D3C29A;
+  --hot:#A3261B; --cool:#3D6E9E; --gold:#B8862B;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --hand:"MedievalSharp","Fraunces",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1A1612; --panel:#241E18; --fg:#EFE6D4; --muted:#ADA08B; --rule:#3A3128; --card:#211B15; --border:#4D4234;
+  --hot:#E07A6C; --cool:#8FB4DA; --gold:#E2B860; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1A1612; --panel:#241E18; --fg:#EFE6D4; --muted:#ADA08B; --rule:#3A3128; --card:#211B15; --border:#4D4234;
+  --hot:#E07A6C; --cool:#8FB4DA; --gold:#E2B860; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:720px;margin:0 auto;padding-block:28px 64px}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--hot);color:#fff;padding:5px 8px;font-weight:500}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:54px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+p{margin:0 0 16px}
+.lede::first-letter{font:400 76px/.8 var(--hand);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+ul.plain{padding-left:20px} ul.plain li{margin:4px 0}
+details{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin:18px 0;font-size:16px}
+summary{font:500 13px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:4px 8px;cursor:pointer;min-height:28px}
+.figure{margin:22px 0}
+.figure img{width:100%;display:block;border:1px solid var(--border);background:#F3E5BF}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:22px 0}
+.stat b{display:block;font:900 40px/1 var(--display);color:var(--hot)}
+.stat span{font:400 13px/1.35 var(--mono);color:var(--muted)}
+table.t{width:100%;border-collapse:collapse;font:400 13.5px/1.4 var(--mono);margin:12px 0 4px}
+table.t th{text-align:left;font-weight:500;border-bottom:2px solid var(--fg);padding:5px 6px 5px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:5px 6px 5px 0;vertical-align:top}
+table.t td.r,table.t th.r{text-align:right}
+.tscroll{overflow-x:auto}
+
+/* ---- the map ---- */
+.topbar{height:40px;display:flex;align-items:center;gap:14px;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:0 max(14px,env(safe-area-inset-left,0px));border-bottom:3px double var(--fg);background:var(--bg);overflow:hidden;white-space:nowrap}
+.tb-name{font:400 19px/1 var(--hand);color:var(--hot);text-decoration:none;letter-spacing:.03em}
+.tb-k{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tb-links{margin-left:auto;display:flex;gap:16px;align-items:center;font:500 12px/1 var(--mono)}
+.tb-links a{text-decoration:none}.tb-links a:hover{text-decoration:underline}
+.mapband{width:100vw;margin-left:calc(50% - 50vw)}
+#map{position:relative;height:calc(100vh - 43px);height:calc(100svh - 43px);min-height:460px;border-bottom:1px solid #BCA676;background:#F3E5BF;overflow:hidden}
+#map::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;box-shadow:inset 0 0 90px rgba(120,84,30,.22), inset 0 0 18px rgba(120,84,30,.18)}
+.cartouche{position:absolute;left:14px;top:14px;z-index:5;max-width:min(330px,calc(100% - 28px));background:rgba(251,243,220,.95);color:#2B2119;border:2px solid #2B2119;outline:1px solid #2B2119;outline-offset:-6px;padding:10px 14px 10px;box-shadow:0 3px 14px rgba(60,40,10,.22)}
+.cartouche::before,.cartouche::after{content:"";position:absolute;width:9px;height:9px;background:#A3261B;border:1px solid #2B2119;border-radius:50%}
+.cartouche::before{left:-6px;top:-6px}.cartouche::after{right:-6px;bottom:-6px}
+.cartouche h1{font:900 clamp(22px,2.3vw,30px)/1 var(--display);letter-spacing:-.015em;margin:6px 0 0;color:#2B2119}
+.cartouche h1 .a{color:#A3261B;font-family:var(--hand);font-weight:400;letter-spacing:.03em}
+.cartouche .dek{font-size:13.5px;line-height:1.36;margin:6px 0 0}
+.cartouche .byline{font-size:11px;color:#6E604E;margin-top:6px}
+.cartouche .kicker{color:#6E604E}
+.ct-fold{position:absolute;right:6px;top:5px;width:26px;height:26px;border:0;background:none;color:#A3261B;font:400 18px/1 var(--hand);cursor:pointer;padding:0}
+.ct-toggle{display:none;font:400 17px/1 var(--hand);color:#A3261B;background:none;border:0;padding:2px 0;cursor:pointer;letter-spacing:.03em;min-height:30px}
+.cartouche.folded .ct-body,.cartouche.folded .ct-fold{display:none}.cartouche.folded .ct-toggle{display:block}.cartouche.folded{padding:4px 11px}
+.ov{position:absolute;z-index:5;font:400 13px/1.3 var(--mono);color:#2B2119}
+.ov-top{right:54px;top:10px;max-width:calc(100% - 480px);display:flex;flex-direction:column;gap:6px;align-items:flex-end;pointer-events:none}
+.ov-top>*{pointer-events:auto}
+.srch{position:relative;width:min(340px,100%)}
+.srch input{width:100%;font:400 15px/1 var(--mono);background:rgba(251,245,228,.96);color:#2B2119;border:1px solid #9C8656;border-radius:3px;padding:9px 10px;min-height:40px;box-shadow:0 1px 4px rgba(60,40,10,.18)}
+.srch input:focus-visible,.chip:focus-visible,.lp label:focus-within,.tl button:focus-visible{outline:2px solid #A3261B;outline-offset:2px}
+.sug{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:#FBF5E4;border:1px solid #9C8656;max-height:300px;overflow:auto;display:none;box-shadow:0 3px 10px rgba(60,40,10,.2);z-index:12}
+.sug li{padding:8px 10px;cursor:pointer;border-bottom:1px solid #E7D9B6}
+.sug li span{color:#7A6A52;font-size:12px}
+.sug li[aria-selected="true"],.sug li:hover{background:#EFE1BC}
+.chips{display:flex;gap:6px;overflow-x:auto;max-width:100%;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:500 12px/1 var(--mono);background:rgba(251,245,228,.94);color:#2B2119;border:1px solid #9C8656;border-radius:999px;padding:8px 11px;cursor:pointer;min-height:34px;white-space:nowrap;box-shadow:0 1px 3px rgba(60,40,10,.14)}
+.chip:hover{background:#EFE1BC}
+.chip.lyr{background:#2B2119;color:#F6EED8;border-color:#2B2119}
+.lp{position:absolute;right:54px;top:104px;z-index:9;background:rgba(251,245,228,.98);border:1px solid #9C8656;border-radius:4px;padding:10px 12px 8px;font:400 13px/1.3 var(--mono);color:#2B2119;box-shadow:0 3px 12px rgba(60,40,10,.25);display:none;min-width:240px;max-height:calc(100% - 200px);overflow:auto}
+.lp.open{display:block}
+.lp h4{margin:0 0 6px;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#7A6A52}
+.lp h5{margin:9px 0 1px;padding-top:7px;border-top:1px solid #E2D3AE;font:600 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#A3261B}
+.lp h4+h5{border-top:0;padding-top:0;margin-top:4px}
+.lp label{display:flex;gap:8px;align-items:center;padding:5px 0;cursor:pointer;min-height:30px}
+.lp input{accent-color:#A3261B;width:16px;height:16px;flex:none}
+.lp canvas{width:22px;height:22px;flex:none}
+/* the timeline */
+.tl{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:6;width:min(620px,calc(100% - 200px));background:rgba(251,243,220,.96);border:2px solid #2B2119;outline:1px solid #2B2119;outline-offset:-5px;padding:9px 14px 8px;font:400 12.5px/1.3 var(--mono);color:#2B2119;box-shadow:0 3px 12px rgba(60,40,10,.22)}
+.tl-row{display:flex;align-items:center;gap:10px}
+.tl button{font:400 18px/1 var(--hand);color:#fff;background:#A3261B;border:1px solid #2B2119;border-radius:50%;width:34px;height:34px;cursor:pointer;flex:none;padding:0}
+.tl input[type=range]{flex:1;accent-color:#A3261B;min-width:0;height:30px}
+.tl .yr{font:400 26px/1 var(--hand);color:#A3261B;min-width:66px;text-align:right}
+.tl .cnt{margin-top:4px;color:#6E604E;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tl .cnt label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.tl .cnt input{accent-color:#A3261B}
+.ov-bl{position:absolute;left:12px;bottom:12px;z-index:4;display:flex;align-items:flex-end;gap:6px;pointer-events:none}
+.rose svg{display:block}
+.maplibregl-popup-content{background:#FBF5E4;color:#2B2119;font:400 13px/1.45 var(--mono);border:1px solid #9C8656;border-radius:4px;padding:10px 12px;box-shadow:0 3px 12px rgba(60,40,10,.25);max-width:310px;max-height:60vh;overflow:auto}
+.maplibregl-popup-content b.t{display:block;font:400 20px/1.15 var(--hand);color:#A3261B;margin-bottom:3px;letter-spacing:.02em;padding-right:14px}
+.maplibregl-popup-content table{border-collapse:collapse;margin:5px 0}
+.maplibregl-popup-content td{padding:1px 8px 1px 0;vertical-align:top}
+.maplibregl-popup-content td:first-child{color:#7A6A52}
+.maplibregl-popup-content .nt{color:#7A6A52;font-size:11.5px;margin:5px 0 0}
+.maplibregl-popup-content .lk{margin-top:6px;padding-top:6px;border-top:1px dashed #C9B583;display:flex;flex-wrap:wrap;gap:4px 12px}
+.maplibregl-popup-content a{color:#A3261B}
+.maplibregl-popup-tip{border-top-color:#9C8656!important;border-bottom-color:#9C8656!important}
+.maplibregl-ctrl-attrib{font:400 11px/1.3 var(--mono)!important;background:rgba(251,245,228,.85)!important}
+.maplibregl-ctrl-group{background:#FBF5E4!important;border:1px solid #9C8656}
+.maplibregl-popup{z-index:7}
+.nojs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 14px var(--mono);color:#6E604E;padding:20px;text-align:center}
+.keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font:400 13px/1.3 var(--mono);color:var(--muted);margin:12px 0}
+.keyrow span{display:flex;align-items:center;gap:6px}.keyrow canvas{width:24px;height:24px}
+@media (max-width:1000px){
+  .ov-top{left:10px;right:54px;max-width:none;align-items:flex-start}
+  .lp{left:10px;right:auto}
+  .cartouche{top:104px}
+}
+@media (max-width:600px){
+  #map{height:calc(100svh - 43px - 40px);min-height:520px}
+  .tb-k,.tb-links a.x{display:none}
+  .lp{top:100px;left:8px;right:8px;min-width:0;max-height:calc(100% - 230px)}
+  .ov-top{left:8px;top:8px}
+  .cartouche{left:8px;top:100px;max-width:calc(100% - 16px);padding:10px 12px}
+  .cartouche h1{font-size:24px}
+  .ct-toggle{display:block}.ct-fold{display:none}
+  .tl{left:8px;right:8px;width:auto;transform:none;bottom:8px;padding:7px 10px 6px}
+  .tl .yr{font-size:22px;min-width:54px}
+  .ov-bl{display:none}
+  .maplibregl-ctrl-bottom-right{bottom:84px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="tb-name" href="#map">The star fort belt</a>
+  <span class="tb-k">Data study · 2026</span>
+  <nav class="tb-links"><a href="#essay">About</a><button class="theme" id="theme" aria-label="Toggle dark mode">◐</button><a href="https://doi.org/10.5281/zenodo.24043680">Paper</a><a class="x" href="https://github.com/Tristan-Hotham/star-forts">Data and code</a></nav>
+</div>
+
+<div class="mapband">
+  <div id="map" data-fullscreen-map role="application" aria-label="Hand-inked world map of star forts with a timeline">
+    <div class="nojs" id="nojs">Loading the map. It needs JavaScript and WebGL.</div>
+    <div class="cartouche" id="cartouche">
+      <button class="ct-toggle" id="ctToggle" aria-expanded="true" title="Show the title">The star fort belt <span aria-hidden="true">▾</span></button>
+      <button class="ct-fold" id="ctFold" title="Fold the title" aria-label="Fold the title">▴</button>
+      <div class="ct-body">
+        <div class="kicker"><b>Data study</b><span>2026</span></div>
+        <h1>The <span class="a">star fort</span> belt</h1>
+        <p class="dek">1,307 bastioned forts, drawn by their real outlines where they survive. Slide through the decades to watch the bastion leave Italy and go round the world.</p>
+        <div class="byline">Dr Tristan Hotham · Independent researcher · 2026</div>
+      </div>
+    </div>
+    <div class="ov ov-top">
+      <div class="srch"><input type="search" id="q" placeholder="Find a fort or a country" aria-label="Find a fort or a country" autocomplete="off"><ul class="sug" id="sug" role="listbox"></ul></div>
+      <div class="chips" id="presets"><button class="chip lyr" id="lyrBtn" aria-expanded="false" aria-controls="lp">Layers</button></div>
+    </div>
+    <div class="lp" id="lp" role="dialog" aria-label="Map layers">
+      <h4>Layers</h4>
+      <h5>Star forts</h5>
+      <label><input type="checkbox" id="lyDated" checked><canvas data-icon="sf-old"></canvas> Dated forts (red: built in the last 30 years)</label>
+      <label><input type="checkbox" id="lyUndated" checked><canvas data-icon="sf-und"></canvas> Forts with no date</label>
+      <label><input type="checkbox" id="lyOutline" checked> Real outlines, moat and rampart (zoom 11 and closer)</label>
+      <label><input type="checkbox" id="lyNames" checked> Fort names</label>
+      <label><input type="checkbox" id="lyBav"><canvas data-icon="sf-oth"></canvas> Bavarian listed earthworks ("Schanzen")</label>
+      <label><input type="checkbox" id="lyLook"><canvas data-icon="sf-oth"></canvas> Shape look-alikes (towered walls, not bastions)</label>
+      <h5>Map</h5>
+      <label><input type="checkbox" data-g="mountains" checked> Ink mountains and hills</label>
+      <label><input type="checkbox" data-g="forests" checked> Forests, marsh and moor</label>
+      <label><input type="checkbox" data-g="biomes" checked> Deserts, grassland, jungle and ice</label>
+      <label><input type="checkbox" data-g="rivers" checked> Rivers and lakes</label>
+      <label><input type="checkbox" data-g="sea" checked> Sea shading and ripples</label>
+      <label><input type="checkbox" data-g="names" checked> Place names</label>
+      <label><input type="checkbox" data-g="borders" checked> Borders</label>
+      <label><input type="checkbox" data-g="roads" checked> Roads and tracks</label>
+      <label><input type="checkbox" data-g="towns" checked> Drawn towns (zoom 12 and closer)</label>
+      <label><input type="checkbox" data-g="heritage"> Other heritage sites</label>
+      <label><input type="checkbox" data-g="hillshade"> Hill shading</label>
+      <label><input type="checkbox" data-g="tint" checked> Watercolour tints</label>
+      <label><input type="checkbox" id="winterBox"> Winter: snow and ice</label>
+      <label><input type="checkbox" id="compassBox" checked> Compass rose</label>
+      <label><input type="checkbox" id="modern"> Plain modern map (to see where you are)</label>
+    </div>
+    <div class="tl" id="tl">
+      <div class="tl-row"><button id="play" aria-label="Play the spread through the decades" title="Play">▶</button>
+        <input type="range" id="yr" min="1480" max="1910" step="10" value="1910" aria-label="Show forts built by this year">
+        <span class="yr" id="yrLab">Today</span></div>
+      <div class="cnt"><span id="cnt"></span><label><input type="checkbox" id="undBox" checked> undated too</label></div>
+    </div>
+    <div class="ov-bl"><div class="rose" id="rose"></div><div class="scalebar" id="scalebar"></div></div>
+  </div>
+</div>
+
+<div class="wrap" id="essay">
+<p class="lede" style="margin-top:6px">In the 1490s Italian engineers worked out that a round tower could not stand up to cannon, and that a wall could only be defended if every foot of it could be shot along from another part of the wall. The answer was the bastion: a low, angled platform of earth faced with brick or stone, pushed out from the corners so that the guns on each one swept the faces of its neighbours. Seen from above, a ring of bastions makes a star. Within a few decades the star fort was being built in Antwerp and Berwick, and soon after on the coasts of India, Africa, Brazil and the Caribbean. This map follows it round the world.</p>
+<p>Every symbol above is one of 1,307 bastioned forts, citadels and fortress towns. 769 of them (59%) still have a star-shaped outline traced in OpenStreetMap, and from zoom 11 the map draws each one along that outline, with its moat outside and its rampart inside. The rest are known only as a point in Wikidata or, for 40 famous forts with no traced outline, a point I added from English Wikipedia. Slide the timeline to see the forts with a date appear decade by decade, the newest in red ink. Tap any fort for its date, where that date comes from, its size and links to its photographs.</p>
+<div class="byline">Dr Tristan Hotham · Independent researcher · 2026 · Data: OpenStreetMap, Wikidata, English Wikipedia, Natural Earth · Base map: <a href="https://maps.tristanhotham.com/ink-map/">The Inked World</a></div>
+<div class="keyrow" id="keyrow"></div>
+
+<div class="stats">
+<div class="stat"><b>1,307</b><span>star forts on the map, in 80 countries</span></div>
+<div class="stat"><b>19%</b><span>have a date for their bastions (251), 84 of them dated by hand</span></div>
+<div class="stat"><b>1.9 ha</b><span>median area inside the outline; 42% have 4 points</span></div>
+<div class="stat"><b>33</b><span>hand-dated forts beyond Europe, from Diu (1535) to Hakodate (1857)</span></div>
+</div>
+
+<h2><span class="n">01 · The belt</span>Where the stars are</h2>
+<p>The forts form a belt across Europe rather than a scatter. 89% of them are in Europe, and the thickest part of the belt runs along the old war zones: the Low Countries, northern France and the Rhine, the Alps, the Venetian and Habsburg frontiers with the Ottomans, and the Baltic coasts fought over by Sweden, Denmark and Russia. The densest one-degree square on the map is around the Rhine and Maas delta in the Netherlands, with 39 forts. Per square kilometre, Malta has the most by far (9 forts on an island group smaller than the Isle of Wight), then the Netherlands (24.9 per 10,000 km²) and Belgium.</p>
+<p>Two countries look larger than life because of who has catalogued what. Sweden has 297 forts here, almost all of them (295) small skansar (redoubts and sconces) recorded in Wikidata from the Swedish heritage register, with no traced outline. A further 560 entries from the Bavarian monument list, also labelled sconces in Wikidata, are of uncertain form and age, so I keep them off the main map and out of the counts; you can switch them on in the Layers panel. Beyond Europe the forts are fewer (142) but far better known: 60% of those in Asia and Oceania and 48% of those in the Americas have a date, against 6% in Scandinavia.</p>
+<div class="figure"><img src="img/belt.jpg" alt="Ink map of Europe and the Mediterranean with every star fort as a small pen star, thickest in the Low Countries, along the Rhine, in northern Italy, on the Baltic coasts and in Portugal" loading="lazy"><p class="src">Every star fort on the map in Europe and around the Mediterranean. Black: outline traced in OpenStreetMap. Brown: point only.</p></div>
+
+<h2><span class="n">02 · The spread</span>From Italy, by land and by sea</h2>
+<p>Only 251 of the 1,307 forts (19%) have a date I can trust for their bastions. 167 come from Wikidata or from the start date in OpenStreetMap; I added 84 more by hand from English Wikipedia for the forts that tell the story, so the dated set leans towards the famous. With that caveat, the shape is clear. The earliest dated works are Italian, from Cassero della Fortezza (1488) to the Fortezza da Basso in Florence (1534). By the 1540s and 1550s bastions were going up at Jülich, Fort Rammekens on the Scheldt, Berwick and Landskrona, and in the same decades at Diu in India, Mazagan in Morocco and San Juan in Puerto Rico.</p>
+<p>That is the striking thing: the bastion did not creep outwards from Italy. The distance from Florence to a country's first dated fort hardly predicts its date (a rank correlation of 0.15 across 49 countries). The median first date for the European countries in the data is 1626, and for the countries beyond Europe 1623. Portuguese and Spanish ships carried the idea to Asia, Africa and the Americas as early as overland routes carried it to the north of Europe.</p>
+<div class="figure"><img src="img/decades.jpg" alt="Bar chart of dated star forts by decade from 1480 to 1910, in Europe and beyond, with a first peak in the 1590s, a second in the 1670s, a colonial burst in the 1750s and 1760s and a late peak of polygonal forts in the 1870s" loading="lazy"><p class="src">Dated forts by decade. These are the 251 forts with a date, not all forts: the bars show when the dated ones were begun.</p></div>
+<div class="tscroll"><table class="t"><thead><tr><th>Region</th><th class="r">Forts</th><th class="r">Dated</th><th>Earliest dated</th></tr></thead><tbody><tr><td>Italy and Malta</td><td class="r">97</td><td class="r">34</td><td>Cassero della Fortezza (Italy), 1488</td></tr><tr><td>Iberia</td><td class="r">102</td><td class="r">14</td><td>Fort of São Julião da Barra (Portugal), 1553</td></tr><tr><td>France</td><td class="r">171</td><td class="r">30</td><td>Fort-Carré (France), 1553</td></tr><tr><td>Low Countries</td><td class="r">125</td><td class="r">19</td><td>Fort Rammekens (Netherlands), 1547</td></tr><tr><td>German lands and Central Europe</td><td class="r">176</td><td class="r">32</td><td>Citadel of Jülich (Germany), 1548</td></tr><tr><td>Scandinavia and the Baltic</td><td class="r">344</td><td class="r">21</td><td>Landskrona Citadel (Sweden), 1559</td></tr><tr><td>British Isles</td><td class="r">34</td><td class="r">14</td><td>Berwick-upon-Tweed walls (United Kingdom), 1558</td></tr><tr><td>Eastern Europe, Balkans and Turkey</td><td class="r">116</td><td class="r">17</td><td>Venetian walls of Nicosia (Cyprus), 1567</td></tr><tr><td>Africa</td><td class="r">15</td><td class="r">4</td><td>Mazagan (Morocco), 1541</td></tr><tr><td>Americas</td><td class="r">87</td><td class="r">42</td><td>Castillo San Felipe del Morro (Puerto Rico), 1539</td></tr><tr><td>Asia and Oceania</td><td class="r">40</td><td class="r">24</td><td>Fort Kastela (Indonesia), 1522</td></tr></tbody></table></div>
+<p class="src">"Earliest dated" is the earliest date in this data, not the first bastion ever built there. Its source is in the popup on the map.</p>
+
+<h2><span class="n">03 · The colonial chain</span>Portugal first, Japan last</h2>
+<p>Of the forts I dated by hand, 33 lie outside Europe. Their order follows the empires. Portugal came first, fortifying its trading posts on the Indian Ocean: Diu (1535), Mazagan (1541), Mozambique Island (1558), Daman (1559) and Fort Jesus at Mombasa (1593), designed by the Milanese engineer Giovanni Battista Cairati. Spain fortified the gates of its treasure fleets: El Morro at San Juan (1539), Havana (1589) and Manila (1590). The Dutch East India Company followed in the 1600s, from Fort Belgica on the Banda Islands (1611) and Fort Zeelandia on Taiwan (1624) to the pentagonal Castle of Good Hope at Cape Town (1666). The English East India Company built Fort St George at Madras in 1640; Denmark built Christiansvaern on St Croix in 1738; France built Louisbourg on Cape Breton Island from 1720.</p>
+<p>The last link is the strangest. In 1857 the Tokugawa shogunate began Goryōkaku at Hakodate, a five-pointed star laid out on the French model, three and a half centuries after the first Italian bastions and just as rifled artillery was making them obsolete.</p>
+<div class="figure"><img src="img/chain.jpg" alt="Timeline from 1530 to 1860 of hand-dated star forts outside Europe, one row per builder: Portugal from 1535, Spain from 1539, the Dutch from 1611, England from 1640, France from 1720, Denmark from 1738, the United States in 1798 and Japan in 1857" loading="lazy"><p class="src">Hand-dated forts beyond Europe by builder. A selection of famous forts, not a census.</p></div>
+
+<h2><span class="n">04 · The great fortress towns</span>Stars you can walk round</h2>
+<p>Most star forts are small. Inside the 769 traced outlines the median area is 1.9 hectares, about 228 m across; half are under 2 ha, and 72% have four, five or six points, the square, pentagon and hexagon of the textbooks. A few are whole towns. Palmanova, the nine-pointed ideal city Venice founded in 1593, encloses 113.8 ha inside its outline as mapped; Naarden, rebuilt from 1673 with a double ring of bastions and moats, 103.5 ha; Elvas, the largest dry-ditch bastioned fortification in the world, 68.1 ha with 17 points. Only 89 outlines enclose more than 10 ha.</p>
+<div class="figure"><img src="img/strip.jpg" alt="Twelve star fort outlines drawn in black ink at the same scale, from the large Palmanova, Naarden and Neuf-Brisach to the small Fort McHenry and Castillo de San Marcos" loading="lazy"><p class="src">Twelve outlines from OpenStreetMap at one scale. Each outline is the line the shape test found, often the outer edge of the rampart or moat, so the areas include some of the works.</p></div>
+<div class="tscroll"><table class="t"><thead><tr><th>Fortress</th><th class="r">Begun</th><th class="r">Area (ha)</th><th class="r">Points</th><th class="r">Across (m)</th></tr></thead><tbody><tr><td><a href="https://en.wikipedia.org/wiki/Palmanova">Palmanova</a> (Italy)</td><td class="r">1593</td><td class="r">113.8</td><td class="r">8</td><td class="r">1,292</td></tr><tr><td><a href="https://en.wikipedia.org/wiki/Naarden">Naarden</a> (Netherlands)</td><td class="r">1673</td><td class="r">103.5</td><td class="r">5</td><td class="r">1,582</td></tr><tr><td><a href="https://en.wikipedia.org/wiki/Bourtange">Bourtange</a> (Netherlands)</td><td class="r">1593</td><td class="r">28.5</td><td class="r">10</td><td class="r">854</td></tr><tr><td><a href="https://en.wikipedia.org/wiki/Neuf-Brisach">Neuf-Brisach</a> (France)</td><td class="r">1698</td><td class="r">48.6</td><td class="r">8</td><td class="r">946</td></tr><tr><td><a href="https://en.wikipedia.org/wiki/Valletta">Valletta</a> (Malta)</td><td class="r">1566</td><td class="r">66.5</td><td class="r">12</td><td class="r">1,414</td></tr><tr><td><a href="https://en.wikipedia.org/wiki/Elvas">Elvas</a> (Portugal)</td><td class="r">1643</td><td class="r">68.1</td><td class="r">17</td><td class="r">1,401</td></tr><tr><td><a href="https://en.wikipedia.org/wiki/Gory%C5%8Dkaku">Goryōkaku</a> (Japan)</td><td class="r">1857</td><td class="r">11.9</td><td class="r">5</td><td class="r">488</td></tr></tbody></table></div>
+<p>Size did not grow steadily with time. Among the dated outlines the median area is 1.4 ha before 1600, 2.6 ha in the 1600s, 1.6 ha in the 1700s and 2.4 ha from 1800, and there is no rank correlation between date and size (-0.02, 172 forts).</p>
+
+<h2><span class="n">05 · Survivors</span>What is left on the ground</h2>
+<p>Star forts were built to be hard to remove, and many outlived their purpose as parks, moats and street plans. 59% of the forts on the map have an outline in OpenStreetMap that my shape test can still recognise as a star; beyond Europe the share is 82%, in Europe 56%. That is not a census of survival: a missing outline can mean a fort that was levelled, one that survives but is mapped as loose pieces, or one too small or eroded to pass the test. Of the 84 forts I dated by hand, 46% have a traced outline, and 5 are known to have been largely demolished: the citadels of Antwerp and Turin, Saarlouis, Fort Amsterdam on Manhattan and Louisbourg (now partly rebuilt).</p>
+
+<h2><span class="n">06 · How I did this</span>Shapes, dates and doubts</h2>
+<p><b>The forts.</b> The outlines come from The Inked World, which searched OpenStreetMap for every fort, fortification, town wall and moat and kept the closed shapes that look like a bastioned trace: at least four sharp salient corners that stand out from the centre at similar distances, with re-entrant corners between them, filling less than 93% of their convex hull. To these it added Wikidata's star forts, sconces and polygonal forts that have no traced outline. I matched each outline to the OpenStreetMap features lying on it for names and start dates, placed Wikidata's fortified towns on the outlines that contain them, and gave the 603 that still had no name the name of the nearest town in Natural Earth.</p>
+<p><b>Look-alikes.</b> The shape test also finds the towered walls of Chinese and Korean towns, Mughal and Rajput forts, and the walls of North African medinas, whose towers can make a star-like outline. I keep the 253 outlines in those countries out of the counts unless I dated them by hand as a European work, and you can switch them on to judge for yourself.</p>
+<p><b>Dates.</b> For each fort I took, in order: my hand date from English Wikipedia; Wikidata's start time or opening date; Wikidata's inception if precise to the year or decade; then OpenStreetMap's start date. Dates before 1450 are the medieval origin of a site, not its bastions, and are set aside (10 forts). An inception can still be the date a site was first fortified rather than when it was bastioned, so treat single dates with care.</p>
+<p><b>What this cannot say.</b> The map shows what has been mapped and catalogued, which is far from everything that was built: thousands of earthwork sconces and siege works have gone, and catalogues are richer in some countries than others. Most forts have no date, and the dated ones are the famous ones. The size of a fort is the area inside the line the shape test found, which is sometimes the inner rampart and sometimes the outer moat.</p>
+
+<details><summary>Sources and licences</summary>
+<ul class="plain">
+<li>OpenStreetMap contributors (ODbL 1.0): fort, wall and moat outlines, names and start dates, via Overpass, as prepared for The Inked World. The derived outline and fort tables in this study are also under the ODbL.</li>
+<li>Wikidata (CC0): star forts, sconces, polygonal forts and fortified towns, with inception, start, opening and end dates, queried with QLever in 2026.</li>
+<li>English Wikipedia (CC BY-SA 4.0): dates, builders and fates of 84 important forts, one article each, linked from the map. Only facts (years and builders) are taken.</li>
+<li>Natural Earth (public domain): countries and populated places.</li>
+<li>Base map: The Inked World (MIT code, CC BY 4.0 text), drawn live from OpenStreetMap vector tiles served by OpenFreeMap (OpenMapTiles schema), AWS Terrain Tiles and RESOLVE Ecoregions 2017 (CC BY 4.0).</li>
+<li>MapLibre GL JS 4.7.1 (BSD 3-Clause). Fonts: MedievalSharp and IM Fell (SIL Open Font License).</li>
+</ul></details>
+
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.24043680">Read the paper</a><a href="https://github.com/Tristan-Hotham/star-forts">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/31/star-forts/">Blog post</a></div>
+
+<footer>
+<p>Dr Tristan Hotham, Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+<p>Cite as: Hotham, T. (2026) The star fort belt: how the bastion spread around the world. Zenodo. <a href="https://doi.org/10.5281/zenodo.24043680">10.5281/zenodo.24043680</a></p>
+<p>Code: <a href="https://github.com/Tristan-Hotham/star-forts">github.com/Tristan-Hotham/star-forts</a> (MIT). Text and figures CC BY 4.0. Fort data © OpenStreetMap contributors (ODbL) and Wikidata (CC0).</p>
+<p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+// The Inked World engine is shared with maps.tristanhotham.com/ink-map/ (same site): its scripts, data, fonts and worker
+// are read from there, so this repository stays small.
+window.INKBASE = new URL('../ink-map/', location.href).href;
+</script>
+<script src="js/page.js?v=20261107"></script>
+<!-- map-fullscreen v1 -->
+<style id="mfs-style">
+.mfs-btn{position:absolute;top:10px;right:10px;z-index:1001;width:34px;height:34px;border:2px solid rgba(0,0,0,.25);border-radius:4px;background:#fff;color:#222;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.mfs-btn:hover{background:#f2f2f2}
+.mfs-btn svg{width:18px;height:18px}
+.mfs-host.mfs-btn-left .mfs-btn{right:auto;left:54px}
+.mfs-fake{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;max-width:none!important;max-height:none!important;margin:0!important;z-index:100000!important;border-radius:0!important}
+html.mfs-lock,html.mfs-lock body{overflow:hidden!important}
+:fullscreen.mfs-host{width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;margin:0!important;border-radius:0!important}
+</style>
+<script id="mfs-script">
+(function(){
+  var ICON_OPEN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+  var ICON_CLOSE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>';
+  function poke(){setTimeout(function(){window.dispatchEvent(new Event('resize'));},60);setTimeout(function(){window.dispatchEvent(new Event('resize'));},400);}
+  function realFS(){return document.fullscreenElement||document.webkitFullscreenElement;}
+  function add(el){
+    if(el.__mfs)return; el.__mfs=1;
+    var cs=getComputedStyle(el); if(cs.position==='static')el.style.position='relative';
+    el.classList.add('mfs-host');
+    // avoid clashing with a top-right Leaflet control (e.g. "Map layers")
+    var tr=el.querySelector('.leaflet-top.leaflet-right');
+    if(tr&&tr.children.length){ el.classList.add('mfs-btn-left'); }
+    var b=document.createElement('button'); b.type='button'; b.className='mfs-btn';
+    b.title='Full screen map'; b.setAttribute('aria-label','Full screen map'); b.innerHTML=ICON_OPEN;
+    ['click','dblclick','mousedown','touchstart','wheel'].forEach(function(t){b.addEventListener(t,function(e){e.stopPropagation();},{passive:t!=='click'});});
+    function setIcon(on){b.innerHTML=on?ICON_CLOSE:ICON_OPEN;b.title=on?'Exit full screen':'Full screen map';b.setAttribute('aria-label',b.title);}
+    function exitFake(){el.classList.remove('mfs-fake');document.documentElement.classList.remove('mfs-lock');setIcon(false);poke();}
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      if(el.classList.contains('mfs-fake')){exitFake();return;}
+      if(realFS()){(document.exitFullscreen||document.webkitExitFullscreen).call(document);return;}
+      var req=el.requestFullscreen||el.webkitRequestFullscreen;
+      if(req){ try{ var p=req.call(el); if(p&&p.catch)p.catch(function(){el.classList.add('mfs-fake');document.documentElement.classList.add('mfs-lock');setIcon(true);poke();}); }catch(err){el.classList.add('mfs-fake');document.documentElement.classList.add('mfs-lock');setIcon(true);poke();} }
+      else { el.classList.add('mfs-fake');document.documentElement.classList.add('mfs-lock');setIcon(true);poke(); }
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&el.classList.contains('mfs-fake'))exitFake();});
+    ['fullscreenchange','webkitfullscreenchange'].forEach(function(t){document.addEventListener(t,function(){setIcon(realFS()===el);poke();});});
+    el.appendChild(b);
+  }
+  function scan(){
+    var els=document.querySelectorAll('[data-fullscreen-map], .leaflet-container, .maplibregl-map, .mapboxgl-map');
+    els.forEach(function(el){
+      if(el.closest('.mfs-host')&&!el.classList.contains('mfs-host'))return;
+      var r=el.getBoundingClientRect(); if(r.width<200||r.height<150)return;
+      add(el);
+    });
+  }
+  function start(){scan(); var n=0; var t=setInterval(function(){scan(); if(++n>20)clearInterval(t);},500);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start); else start();
+})();
+</script>
+<!-- /map-fullscreen -->
+
+</body>
+</html>
