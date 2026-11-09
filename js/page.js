@@ -134,10 +134,10 @@
     map.addLayer({ id: 'sfd-wall', type: 'line', source: 'sfd', minzoom: 11.3, layout: { 'line-join': 'miter', 'line-miter-limit': 4, 'line-cap': 'round' },
       paint: { 'line-color': ['case', ['>', ['coalesce', ['get', 'y'], 0], S.year - 30], INK.red, INK.ink], 'line-width': iz(11.3, 1, 14, 1.8, 17, 3), 'line-opacity': iz(11.3, 0, 12, 1) } });
     map.addLayer({ id: 'sfo-other', type: 'line', source: 'sfo', minzoom: 10.5, paint: { 'line-color': '#8A8A80', 'line-width': 1.4, 'line-dasharray': [2, 2] } });
-    const size = big => iz(1, big ? 0.32 : 0.26, 4, big ? 0.48 : 0.4, 8, big ? 0.85 : 0.7, 11, 1.0);
-    const sym = (id, icon, filter, big, op) => map.addLayer({ id, type: 'symbol', source: 'sf', filter, maxzoom: 12.2,
+    const size = big => iz(1, big ? 0.46 : 0.38, 4, big ? 0.56 : 0.46, 8, big ? 0.85 : 0.7, 11, 1.0);
+    const sym = (id, icon, filter, big, op) => map.addLayer({ id, type: 'symbol', source: 'sf', filter,
       layout: { 'icon-image': icon, 'icon-size': size(big), 'icon-allow-overlap': true, 'icon-ignore-placement': true, 'symbol-sort-key': ['coalesce', ['get', 'y'], 3000] },
-      paint: { 'icon-opacity': ['interpolate', ['linear'], ['zoom'], 10.8, op || 1, 12.0, 0] } });
+      paint: { 'icon-opacity': ['interpolate', ['linear'], ['zoom'], 10.8, op || 1, 12.0, ['case', ['has', 'ol'], 0, op || 1]] } });   // forts with a drawn outline hand over to it; the rest keep their icon
     const F = filters();
     sym('sf-oth', 'sf-oth', F.oth, false, 0.8);
     sym('sf-und', 'sf-und', F.und, false, 0.9);
@@ -154,6 +154,7 @@
         const walled = new Set();
         for (const f of d.features) { const p = BYID.get(f.properties.id); f.properties.kk = p && p.k === 'l' ? 'l' : 'm'; if (p && p.y) f.properties.y = p.y; if (f.properties.k === 'w') walled.add(f.properties.id); }
         for (const f of j.features) { const p = BYID.get(f.properties.id); f.properties.k = p && p.k === 'l' ? 'l' : 'm'; if (p && p.y) f.properties.y = p.y; if (walled.has(f.properties.id)) f.properties.d = 1; }
+        const hasOl = new Set(j.features.map(f => f.properties.id)); DATA.features.forEach(f => { if (hasOl.has(f.properties.id)) f.properties.ol = 1; }); map.getSource('sf').setData(DATA);
         map.getSource('sfo').setData(j); map.getSource('sfd').setData(d); apply(map);
       }).catch(e => console.warn('outlines', e)); };
     map.on('zoomend', lazy); lazy();
